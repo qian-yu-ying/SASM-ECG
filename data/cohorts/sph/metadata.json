@@ -1,0 +1,55 @@
+{
+  "cohort": "sph",
+  "labels": [
+    "NORMAL ECG",
+    "SINUS TACHYCARDIA",
+    "SINUS BRADYCARDIA",
+    "SINUS ARRHYTHMIA",
+    "atrial premature complex",
+    "ATRIAL FIBRILLATION",
+    "ATRIAL FLUTTER",
+    "PREMATURE VENTRICULAR COMPLEXES",
+    "LEFT ANTERIOR FASCICULAR BLOCK",
+    "LEFT BUNDLE BRANCH BLOCK",
+    "INRIGHT BUNDLE BRANCH BLOCK",
+    "RIGHT BUNDLE BRANCH BLOCK",
+    "LEFT VENTRICULAR HYPERTROPHY"
+  ],
+  "target_count": 13,
+  "original_cached_records": 25770,
+  "released_records": 17428,
+  "query_records": 15473,
+  "released_support_union_records": 1955,
+  "original_role_counts": {
+    "query": 15473,
+    "support_pool": 10297
+  },
+  "episode_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "shots": [
+    5,
+    10
+  ],
+  "indexing": "zero-based exported feature row; original cache indices provided separately",
+  "feature_selection": "query plus union of fixed 5/10-shot supports across 20 seeds; no new sampling"
+}

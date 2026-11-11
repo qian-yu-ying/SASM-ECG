@@ -1,0 +1,66 @@
+{
+  "ecgfounder": [
+    {
+      "method": "sasm-ens",
+      "n_seeds": 20,
+      "macro_ap_mean": 78.19820830115121,
+      "macro_auc_mean": 94.1596747584512,
+      "paper_rounded_reference": {
+        "macro_ap": 78.2,
+        "macro_auc": 94.16
+      }
+    },
+    {
+      "method": "meananchor",
+      "n_seeds": 20,
+      "macro_ap_mean": 78.1728196691135,
+      "macro_auc_mean": 94.15364861451056,
+      "paper_rounded_reference": {
+        "macro_ap": 78.17,
+        "macro_auc": 94.15
+      }
+    },
+    {
+      "method": "lp",
+      "n_seeds": 20,
+      "macro_ap_mean": 69.91368135695255,
+      "macro_auc_mean": 90.63428254614922,
+      "paper_rounded_reference": {
+        "macro_ap": 69.91,
+        "macro_auc": 90.63
+      }
+    }
+  ],
+  "merl": [
+    {
+      "method": "sasm-ens",
+      "n_seeds": 20,
+      "macro_ap_mean": 67.43203530094942,
+      "macro_auc_mean": 88.30779397165153,
+      "paper_rounded_reference": {
+        "macro_ap": 67.43,
+        "macro_auc": 88.31
+      }
+    },
+    {
+      "method": "meananchor",
+      "n_seeds": 20,
+      "macro_ap_mean": 67.34988207080734,
+      "macro_auc_mean": 88.27622059169462,
+      "paper_rounded_reference": {
+        "macro_ap": 67.35,
+        "macro_auc": 88.28
+      }
+    },
+    {
+      "method": "lp",
+      "n_seeds": 20,
+      "macro_ap_mean": 57.57635485790543,
+      "macro_auc_mean": 84.75632399599631,
+      "paper_rounded_reference": {
+        "macro_ap": 57.58,
+        "macro_auc": 84.76
+      }
+    }
+  ]
+}

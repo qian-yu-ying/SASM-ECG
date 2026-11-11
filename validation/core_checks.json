@@ -1,0 +1,173 @@
+{
+  "gradient_finite_difference_error": 4.152945987101475e-09,
+  "mean_anchor_identity_error": 1.4210854715202004e-14,
+  "optimizer_AST_identical_to_experiment": true,
+  "exports": [
+    {
+      "backbone": "ecgfounder",
+      "cohort": "ningbo",
+      "feature_values_exactly_preserved": true
+    },
+    {
+      "backbone": "ecgfounder",
+      "cohort": "cpsc2018",
+      "feature_values_exactly_preserved": true
+    },
+    {
+      "backbone": "ecgfounder",
+      "cohort": "sph",
+      "feature_values_exactly_preserved": true
+    },
+    {
+      "backbone": "merl",
+      "cohort": "ningbo",
+      "feature_values_exactly_preserved": true
+    },
+    {
+      "backbone": "merl",
+      "cohort": "cpsc2018",
+      "feature_values_exactly_preserved": true
+    },
+    {
+      "backbone": "merl",
+      "cohort": "sph",
+      "feature_values_exactly_preserved": true
+    }
+  ],
+  "numerical_checks": [
+    {
+      "backbone": "ecgfounder",
+      "cohort": "ningbo",
+      "shot": 5,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 59.78951191860319,
+      "macro_auc": 94.95055644740805,
+      "max_gradient": 1.3431232931508257e-07,
+      "coordinate_score_error": 1.4210854715202004e-14
+    },
+    {
+      "backbone": "ecgfounder",
+      "cohort": "ningbo",
+      "shot": 10,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 61.80138280884062,
+      "macro_auc": 95.55530803077019,
+      "max_gradient": 1.536294843496839e-07,
+      "coordinate_score_error": 1.5987211554602254e-14
+    },
+    {
+      "backbone": "ecgfounder",
+      "cohort": "cpsc2018",
+      "shot": 5,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 79.26435542958345,
+      "macro_auc": 93.96748758029311,
+      "max_gradient": 8.102684409191929e-08,
+      "coordinate_score_error": 6.217248937900877e-15
+    },
+    {
+      "backbone": "ecgfounder",
+      "cohort": "cpsc2018",
+      "shot": 10,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 81.32225266582583,
+      "macro_auc": 94.79234433572863,
+      "max_gradient": 4.585335430290949e-07,
+      "coordinate_score_error": 6.217248937900877e-15
+    },
+    {
+      "backbone": "ecgfounder",
+      "cohort": "sph",
+      "shot": 5,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 73.82931405959286,
+      "macro_auc": 96.27994801020823,
+      "max_gradient": 3.074515746525075e-07,
+      "coordinate_score_error": 1.2434497875801753e-14
+    },
+    {
+      "backbone": "ecgfounder",
+      "cohort": "sph",
+      "shot": 10,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 75.06215861668026,
+      "macro_auc": 96.75124047967026,
+      "max_gradient": 2.934833643634602e-07,
+      "coordinate_score_error": 1.4210854715202004e-14
+    },
+    {
+      "backbone": "merl",
+      "cohort": "ningbo",
+      "shot": 5,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 40.84201091978164,
+      "macro_auc": 86.76162854382596,
+      "max_gradient": 3.8135075717095693e-07,
+      "coordinate_score_error": 1.1546319456101628e-14
+    },
+    {
+      "backbone": "merl",
+      "cohort": "ningbo",
+      "shot": 10,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 42.93591788256465,
+      "macro_auc": 88.45138215245139,
+      "max_gradient": 5.742473516042986e-07,
+      "coordinate_score_error": 1.7763568394002505e-14
+    },
+    {
+      "backbone": "merl",
+      "cohort": "cpsc2018",
+      "shot": 5,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 68.08448083881079,
+      "macro_auc": 86.88266695224941,
+      "max_gradient": 4.4448508920713614e-07,
+      "coordinate_score_error": 2.1316282072803006e-14
+    },
+    {
+      "backbone": "merl",
+      "cohort": "cpsc2018",
+      "shot": 10,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 69.85403912899048,
+      "macro_auc": 89.03212372368759,
+      "max_gradient": 5.319081459494648e-07,
+      "coordinate_score_error": 1.1546319456101628e-14
+    },
+    {
+      "backbone": "merl",
+      "cohort": "sph",
+      "shot": 5,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 52.22976133884585,
+      "macro_auc": 88.93673098205467,
+      "max_gradient": 9.379884380669791e-07,
+      "coordinate_score_error": 1.1546319456101628e-14
+    },
+    {
+      "backbone": "merl",
+      "cohort": "sph",
+      "shot": 10,
+      "seed": 0,
+      "method": "meananchor",
+      "macro_ap": 53.81399667083786,
+      "macro_auc": 89.71675740603882,
+      "max_gradient": 2.984029016620687e-07,
+      "coordinate_score_error": 1.2434497875801753e-14
+    }
+  ],
+  "public_assets_pickle_free": true,
+  "private_path_scan_passed": true
+}

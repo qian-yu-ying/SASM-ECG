@@ -1,0 +1,49 @@
+{
+  "cohort": "cpsc2018",
+  "labels": [
+    "LEFT BUNDLE BRANCH BLOCK",
+    "RIGHT BUNDLE BRANCH BLOCK",
+    "WITH 1ST DEGREE AV BLOCK",
+    "atrial premature complex",
+    "non-specific ST depression",
+    "ATRIAL FIBRILLATION",
+    "SINUS RHYTHM"
+  ],
+  "target_count": 7,
+  "original_cached_records": 6083,
+  "released_records": 4950,
+  "query_records": 3654,
+  "released_support_union_records": 1296,
+  "original_role_counts": {
+    "query": 3654,
+    "support_pool": 2429
+  },
+  "episode_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "shots": [
+    5,
+    10
+  ],
+  "indexing": "zero-based exported feature row; original cache indices provided separately",
+  "feature_selection": "query plus union of fixed 5/10-shot supports across 20 seeds; no new sampling"
+}
