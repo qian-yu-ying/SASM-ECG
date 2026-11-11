@@ -70,13 +70,13 @@ No promise of complete Table 2 reproduction is made for omitted methods.
 See `THIRD_PARTY_NOTICES.md` and `LICENSE_NOTICE.md` for attribution and
 the distinction between upstream licenses and the author's code license.
 
-## GitHub publishing layout
+## Download cached assets
 
-Upload the contents of the companion code archive to the repository. Attach
-the asset ZIP to a GitHub Release and put its actual download link in this
-README after the release exists. Do not claim assets are downloadable until
-that attachment is published. Extract the asset ZIP inside the code directory;
-it supplies data/features/ and data/source_heads/. Verify with:
+Download [SASM_planB_assets_20261111.zip](https://github.com/qian-yu-ying/SASM-ECG/releases/download/v1.0.0/SASM_planB_assets_20261111.zip)
+and extract it into the repository root. The archive supplies
+`data/features/` and `data/source_heads/`.
+
+Verify the extracted files with:
 
 `python examples/verify_assets.py`
 
