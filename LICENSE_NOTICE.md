@@ -1,7 +1,7 @@
 # License scope
 
 The authors selected the MIT License for SASM-authored code in this release.
-See `LICENSE` for the full license text. Project attribution: "SASM authors".
+See `LICENSE` for the full license text. Project attribution: Chenxi Yang, Guolan Deng, and Yi Wang.
 
 Third-party notices in `THIRD_PARTY_NOTICES.md` and `notices/` are retained.
 The MIT license for SASM-authored code does not relicense third-party code,

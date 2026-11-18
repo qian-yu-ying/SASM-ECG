@@ -2,8 +2,11 @@
 
 Source-Anchored Symbolic Matching for few-shot multi-label ECG adaptation.
 
-**v1.3.0 is the current release.** It includes the v1.2.0 nine-class CPSC2018
-reproduction snapshot plus the DCA and locked-threshold result exports. The
+**v1.4.0 is the current release.** It builds on the v1.2.0 nine-class CPSC2018
+reproduction snapshot and the v1.3.0 DCA/locked-threshold release by adding the
+complete `results/supplementary/` CSV/JSON bundles, `scripts/supplementary/`
+generation/audit scripts, and `scripts/reference_pipelines/` (including
+raw-waveform `FullFT`/`LoRA` reference code in `gpu_worker.py`). The
 nine-class snapshot includes
 6,877 CPSC2018 records, a fixed 2,755-record support pool and a 4,122-record
 query set. The labels, feature row order, support episodes, source mappings,
@@ -25,7 +28,7 @@ python -m pip install -r requirements.txt
 python -m pip install --no-deps -e .
 ```
 
-From the **v1.3.0 Release**, download `SASM-ECG_v1.3.0_code.zip` and check it
+From the **v1.4.0 Release**, download `SASM-ECG_v1.4.0_code.zip` and check it
 against `SHA256SUMS.txt` before extracting. This code archive does not contain
 raw waveforms, encoder checkpoints or the ignored bulk feature arrays. The
 cached result exports and fixed episode metadata are included in the repository;
@@ -36,7 +39,7 @@ the nine-class checks; no raw waveforms, private credentials or full encoder
 checkpoints are distributed.
 
 ```bash
-git clone --branch v1.3.0 --depth 1 https://github.com/qian-yu-ying/SASM-ECG.git
+git clone --branch v1.4.0 --depth 1 https://github.com/qian-yu-ying/SASM-ECG.git
 cd SASM-ECG
 ```
 
@@ -150,7 +153,25 @@ the chosen risk threshold and cohort prevalence. See
 - `validation/`: actual release checks, with tolerances and scope.
 - `docs/REPRODUCTION_SCOPE.md`: what is runnable and what is results-only.
 
-No raw ECG waveforms, private credentials, remote workers, or full third-party
-encoder checkpoints are distributed. The repository does not provide an
-end-to-end raw-waveform FullFT/LoRA pipeline. Integrity hashes verify package
-identity; they do not certify clinical equivalence of every mapped label.
+### Supplementary revision bundles and reference pipelines (v1.4.0)
+
+- `results/supplementary/`: Exported summary CSVs and lock/audit JSONs across
+  all six supplementary analyses—controlled `h`-vs-`g` PTB-XL ablation
+  (`hg_*.csv`), bidirectional SPH-dev role swap (`swap_*.csv`), Chapman-locked
+  `DevTemperature` calibration (`calibration_*.csv`, `temperature.lock.json`),
+  pinned Xeon Gold 5418Y BLAS-1 timing (`timing_*.csv`, `timing_environment.json`),
+  48-slice age/sex subgroups (`subgroup_*.csv`, `DEMOGRAPHIC_CONFLICT_AUDIT.json`),
+  and the DCA/locked-threshold summary files (byte-identical to `results/dca_threshold/`).
+- `scripts/supplementary/`: Archived generator and audit scripts for the
+  supplementary bundles (require upstream full cohort caches and Chapman
+  development features).
+- `scripts/reference_pipelines/`: Archived full-study training, control,
+  ablation, timing, and bootstrap/Holm scripts, including raw-waveform
+  `FullFT`/`LoRA` workers (`gpu_worker.py`), requiring independent upstream public
+  datasets and pretrained checkpoints.
+
+No raw ECG waveforms, private credentials, remote workers, Chapman development
+feature matrices, or full third-party encoder checkpoints are distributed.
+Standalone execution covers cached-feature adaptation (`smoke_check.py` and
+`examples/`). Integrity hashes verify package identity; they do not certify
+clinical equivalence of every mapped label.

@@ -1,5 +1,23 @@
 # Current release
 
+## v1.4.0 — 2026-11-18
+
+- Consolidate all six supplementary CPU and clinical analysis exports under
+  `results/supplementary/` (controlled raw-embedding `h` vs. 150-logit `g`
+  ablation, bidirectional SPH-dev role swap, Chapman-locked `DevTemperature`
+  calibration, unified pinned single-core Xeon Gold 5418Y BLAS-1 latency,
+  48-slice age/sex subgroup metrics and `DEMOGRAPHIC_CONFLICT_AUDIT.json`, and
+  low-prevalence DCA + query-label-free locked threshold tables).
+- Add the archived supplementary generation scripts under
+  `scripts/supplementary/` and the full-study baseline, ablation, timing,
+  fine-tuning (`FullFT`/`LoRA`, including `gpu_worker.py`), and bootstrap/Holm
+  aggregation reference pipelines under `scripts/reference_pipelines/`.
+- Add explicit author copyright attribution (`Chenxi Yang, Guolan Deng, and Yi
+  Wang`) in `LICENSE` and `LICENSE_NOTICE.md`.
+- Preserve all `v1.3.0` `results/dca_threshold/` exports, DCA provenance, and
+  `v1.2.0` nine-class CPSC2018 protocol, STE rule, and archived coefficients
+  unchanged.
+
 ## v1.3.0 — 2026-11-18
 
 - Add DCA and locked-threshold result exports from the retrospective

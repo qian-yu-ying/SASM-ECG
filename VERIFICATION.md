@@ -1,30 +1,31 @@
-# Release validation — v1.3.0
+# Release validation — v1.4.0
 
-All checks were performed locally on CPU using already completed experiment
-assets. No remote experiment, worker, fitting job or GPU job was started.
+All checks were performed locally on CPU using completed cached experiment
+assets (`v1.4.0` working tree before commit/tag). No remote experiment,
+worker, fitting job or GPU job was started.
 
-- Nine-class CPSC2018 structure: 6,877 records, 2,755 support-pool records,
-  4,122 query records, 3,966 query waveform groups and 40 fixed support episodes.
-- Eight numerical unit tests passed, including per-class lambda gradients and
-  the alpha-only behavior of a zero-lambda unsupported class.
-- Fresh primary fitting: two backbones x two shot budgets x 20 support seeds,
-  three methods. Per-seed all9/matched8 macro AP/AUROC passed the 0.005 pp gate.
-- Archived coefficient replay: 80 episodes x nine methods x three scopes;
-  2,160 metric rows (AP and AUROC each). Maximum error was approximately 1.11e-16
-  in fraction units. This is scoring verification, not new model fitting.
-- Cross-cohort primary seed-0 checks, Ningbo/SPH Route-B seed-0 checks, CPSC SR
-  sensitivity seed-0 checks and source-head stationarity checks passed.
-- Fresh fits may reorder extremely close STE scores across numerical runtimes.
-  STE-only AP is reported separately; exact archived-model consistency is
-  verified with replay rather than an unrealistically strict refit equality.
+- Nine-class CPSC2018 structure verified (`examples/verify_cpsc9_protocol.py`):
+  6,877 records, 2,755 support-pool records, 4,122 query records, 3,966 query
+  waveform groups and 40 fixed support episodes (`STE lambda_STE=0`).
+- Companion asset SHA-256 verification passed across all 276 entries in
+  `data/ASSET_MANIFEST.json` (`examples/verify_assets.py`).
+- All 10 unit tests passed (`python -m unittest discover -s tests -v`), covering
+  algebraic gradients, affine coordinate equivalence, zero-lambda unmatched-class
+  behavior, optimizer guarantees, and `tests/test_dca_release.py` (`v1.3.0`
+  DCA/threshold protocol & summary checks).
+- Full archived coefficient replay passed (`examples/replay_cpsc9.py`, 80
+  episodes x 9 methods x 3 scopes = 2,160 metric rows; max AP/AUROC error vs.
+  reference CSV <= 2.22e-16).
+- Fullpool PTB-XL source-head stationarity and CV disjointness verified
+  (`examples/verify_source_heads.py`).
+- Seed-0 fresh primary refit gate passed for ECGFounder and MERL at 5-shot and
+  10-shot (`examples/evaluate_cpsc9.py`), alongside `smoke_check.py`.
+- All added Python files in `scripts/supplementary/` and
+  `scripts/reference_pipelines/` passed syntax verification (`py_compile`), and
+  the five DCA summary/lock files in `results/supplementary/` were verified
+  byte-for-byte identical to `results/dca_threshold/`.
 
-See validation/RELEASE_CHECKS.json for scope and environment, per-condition
-validation JSONs for metrics, and docs/REPRODUCTION_SCOPE.md for exclusions.
-Package SHA-256 checks certify file identity, not clinical mapping correctness
-or absence of backbone pretraining overlap.
-
-The DCA and locked-threshold supplementary exports were checked separately:
-240 external episodes were scored, saved-coefficient replay error was 0, the
-independent DCA formula check was below 6e-17, and Raw/DevTemperature threshold
-decisions were identical. The threshold analysis is conditional on fixed query
-cohorts and does not establish prospective clinical performance.
+See `validation/RELEASE_CHECKS.json` for scope and environment details and
+`docs/REPRODUCTION_SCOPE.md` for execution boundaries. Package SHA-256 checks
+certify file identity, not clinical mapping correctness or absence of backbone
+pretraining overlap.
