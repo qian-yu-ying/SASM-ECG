@@ -1,0 +1,66 @@
+{
+  "cohort": "cpsc2018",
+  "protocol_id": "cpsc2018-nineclass-20261117-NORM",
+  "labels": [
+    "Normal",
+    "AF",
+    "I-AVB",
+    "LBBB",
+    "RBBB",
+    "PAC",
+    "PVC",
+    "STD",
+    "STE"
+  ],
+  "target_count": 9,
+  "original_cached_records": 6877,
+  "released_records": 6877,
+  "query_records": 4122,
+  "support_pool_records": 2755,
+  "query_waveform_groups": 3966,
+  "episode_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "shots": [
+    5,
+    10
+  ],
+  "indexing": "zero-based full 6877-record cache",
+  "unmatched_columns": [
+    8
+  ],
+  "anchor_lambda_multiplier": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0
+  ],
+  "normal_mapping": "NORM",
+  "prior_result_exposure": true,
+  "retrospective": true,
+  "feature_selection": "all 6877 raw-record features; fixed support episodes and query set; waveform-group disjoint roles"
+}

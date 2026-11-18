@@ -1,0 +1,79 @@
+{
+  "release": "v1.2.0",
+  "date": "2026-11-18",
+  "scope": "local CPU release checks on completed cached assets; no remote experiment executed",
+  "python": "3.14.4",
+  "numpy": "2.4.5",
+  "scipy": "1.18.1",
+  "sklearn": "1.9.1",
+  "refit": [
+    {
+      "backbone": "ecgfounder",
+      "shot": 5,
+      "settings": 20,
+      "methods": [
+        "LP",
+        "SASM-Ens",
+        "MeanAnchor"
+      ],
+      "max_gated_error_fraction": 1.3622500434906648e-05,
+      "max_including_STE_error_fraction": 0.00012226518883376447
+    },
+    {
+      "backbone": "ecgfounder",
+      "shot": 10,
+      "settings": 20,
+      "methods": [
+        "LP",
+        "SASM-Ens",
+        "MeanAnchor"
+      ],
+      "max_gated_error_fraction": 1.5296310271861735e-05,
+      "max_including_STE_error_fraction": 0.00013766687583055548
+    },
+    {
+      "backbone": "merl",
+      "shot": 5,
+      "settings": 20,
+      "methods": [
+        "LP",
+        "SASM-Ens",
+        "MeanAnchor"
+      ],
+      "max_gated_error_fraction": 9.160124226581523e-06,
+      "max_including_STE_error_fraction": 8.24411180396778e-05
+    },
+    {
+      "backbone": "merl",
+      "shot": 10,
+      "settings": 20,
+      "methods": [
+        "LP",
+        "SASM-Ens",
+        "MeanAnchor"
+      ],
+      "max_gated_error_fraction": 6.917393824079632e-06,
+      "max_including_STE_error_fraction": 6.313160155529962e-05
+    }
+  ],
+  "replay": {
+    "episodes": 80,
+    "methods": 9,
+    "scopes": 3,
+    "metric_rows": 2160,
+    "max_error_fraction": 1.1102230246251565e-16,
+    "passed": true
+  },
+  "unit_tests": 8,
+  "other_checks": [
+    "cross-cohort primary seed-0 paths, both shots and backbones",
+    "Ningbo/SPH Route-B seed-0 paths",
+    "CPSC Normal->SR seed-0 all supported methods, both shots/backbones",
+    "fullpool source stationarity and source-fold disjointness"
+  ],
+  "limitations": [
+    "fresh convex refits need not be bitwise-identical across BLAS environments",
+    "STE-only fresh-fit AP is a diagnostic; archived-coefficient replay supplies the precise consistency check",
+    "not an end-to-end raw-waveform experiment rerun"
+  ]
+}

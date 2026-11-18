@@ -1,0 +1,53 @@
+{
+  "code_sha256": "97fe0b4c388dfcaa93f87ccfcd8434202a4518acf7ead28fc22b3de5baa42a7b",
+  "main_protocol_sha256": "217b65db528b3f2e510e7ca1fc561625fce0f9e4ef93ddee549e62feceac5fbe",
+  "prior_result_exposure": true,
+  "no_external_selection": true,
+  "ECE": "10 equal-width probability bins [lo,hi), last includes 1; weighted absolute calibration gap; empty bins ignored; calculate each label then macro average; not flattened micro-ECE",
+  "Brier": "mean squared probability error over records then macro over labels",
+  "F1": "per label probability >=0.50; zero prediction and zero denominator -> 0; macro average",
+  "oracle": "delta=logit(query label prevalence)-logit((support positives+0.5)/(n_support+1)); oracle retrospective, not deployable; query labels not used in head fitting",
+  "ROC": "sklearn roc_curve drop_intermediate=True; last retained point with specificity >= target-1e-12; zero positive predictions PPV=0; retrospective query operating points",
+  "weights": "record-weighted primary; each query normalized-full-waveform group equal total weight sensitivity; no patient-independence claim",
+  "Refit": "Fixed Direct-LP weights, support-only unpenalized intercept shift; final mean gradient <1e-10; STE finite LP tolerance, not bitwise identity",
+  "seed_statistics": "10000 paired seed bootstrap; two-sided Wilcoxon auto; one Holm family per metric/scope across all primary SASM contrasts shown; fixed query conditional",
+  "query_bootstrap": "2000 normalized waveform-group cluster resamples, fixed 20 support sets; identical group draws across all methods; compute metric each support set then mean, never score average predictions; per-class valid positive and negative draws; conditional, not patient-level",
+  "bootstrap_seed": 2026111720,
+  "scopes": {
+    "all9": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "matched8": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "native_shared7": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "STE": [
+      8
+    ]
+  },
+  "workers": 4,
+  "blas_threads": 1
+}

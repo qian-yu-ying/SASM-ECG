@@ -1,0 +1,159 @@
+{
+  "aliases": {
+    "INRIGHT BUNDLE BRANCH BLOCK": "INCOMPLETE RIGHT BUNDLE BRANCH BLOCK",
+    "SINUS ARRHYTHMIA": "WITH SINUS ARRHYTHMIA"
+  },
+  "cohorts": {
+    "ningbo": {
+      "native_indices": [
+        18,
+        36,
+        20,
+        26,
+        112,
+        30,
+        11,
+        82,
+        79,
+        9,
+        16,
+        23,
+        15,
+        -1,
+        -1,
+        -1,
+        32,
+        50,
+        34,
+        4,
+        3,
+        6
+      ],
+      "covered_target_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "target_labels": [
+        "INRIGHT BUNDLE BRANCH BLOCK",
+        "LEFT ANTERIOR FASCICULAR BLOCK",
+        "LEFT BUNDLE BRANCH BLOCK",
+        "LEFT VENTRICULAR HYPERTROPHY",
+        "NONSPECIFIC INTRAVENTRICULAR BLOCK",
+        "QT HAS LENGTHENED",
+        "RIGHT BUNDLE BRANCH BLOCK",
+        "RIGHT VENTRICULAR HYPERTROPHY",
+        "WITH 1ST DEGREE AV BLOCK",
+        "PREMATURE VENTRICULAR COMPLEXES",
+        "atrial premature complex",
+        "inverted T-waves",
+        "low QRS voltages in the frontal and horizontal leads",
+        "non-specific ST depression",
+        "non-specific T-wave changes",
+        "prolonged PR interval",
+        "ATRIAL FLUTTER",
+        "ELECTRONIC ATRIAL PACEMAKER",
+        "SINUS ARRHYTHMIA",
+        "SINUS BRADYCARDIA",
+        "SINUS RHYTHM",
+        "SINUS TACHYCARDIA"
+      ]
+    },
+    "cpsc2018": {
+      "native_indices": [
+        2,
+        5,
+        79,
+        20,
+        11,
+        16,
+        9,
+        -1,
+        -1
+      ],
+      "covered_target_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "target_labels": [
+        "Normal",
+        "AF",
+        "I-AVB",
+        "LBBB",
+        "RBBB",
+        "PAC",
+        "PVC",
+        "STD",
+        "STE"
+      ]
+    },
+    "sph": {
+      "native_indices": [
+        2,
+        6,
+        4,
+        34,
+        16,
+        5,
+        32,
+        9,
+        36,
+        20,
+        18,
+        11,
+        26
+      ],
+      "covered_target_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "target_labels": [
+        "NORMAL ECG",
+        "SINUS TACHYCARDIA",
+        "SINUS BRADYCARDIA",
+        "SINUS ARRHYTHMIA",
+        "atrial premature complex",
+        "ATRIAL FIBRILLATION",
+        "ATRIAL FLUTTER",
+        "PREMATURE VENTRICULAR COMPLEXES",
+        "LEFT ANTERIOR FASCICULAR BLOCK",
+        "LEFT BUNDLE BRANCH BLOCK",
+        "INRIGHT BUNDLE BRANCH BLOCK",
+        "RIGHT BUNDLE BRANCH BLOCK",
+        "LEFT VENTRICULAR HYPERTROPHY"
+      ]
+    }
+  }
+}

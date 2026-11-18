@@ -1,0 +1,224 @@
+{
+  "rows": [
+    {
+      "suite": "fullpool",
+      "backbone": "ecgfounder",
+      "dataset": "ningbo",
+      "shot": 5,
+      "seed": 0,
+      "method": "selected",
+      "covered_labels": 22,
+      "ap": 0.5981883087872493,
+      "auc": 0.9481499662781164,
+      "reference_abs_error": {
+        "ap": 2.0780680953791375e-08,
+        "auc": 2.1821566775770407e-09
+      },
+      "reference_pass": true,
+      "max_gradient": 2.6905399704183706e-07,
+      "fit_and_prediction_seconds": 0.4441852999998446
+    },
+    {
+      "suite": "fullpool",
+      "backbone": "ecgfounder",
+      "dataset": "ningbo",
+      "shot": 5,
+      "seed": 0,
+      "method": "direct",
+      "covered_labels": 22,
+      "ap": 0.5179810472509191,
+      "auc": 0.9087713958012636,
+      "reference_abs_error": {
+        "ap": 0.0,
+        "auc": 0.0
+      },
+      "reference_pass": true,
+      "max_gradient": 2.6905399704183706e-07,
+      "fit_and_prediction_seconds": 0.5054681999999957
+    },
+    {
+      "suite": "native_raw",
+      "backbone": "ecgfounder",
+      "dataset": "ningbo",
+      "shot": 5,
+      "seed": 0,
+      "method": "selected",
+      "covered_labels": 19,
+      "ap": 0.6554615124473552,
+      "auc": 0.9635162759359356,
+      "reference_abs_error": {
+        "ap": 1.3962784373156012e-08,
+        "auc": 4.177096524227153e-08
+      },
+      "reference_pass": true,
+      "max_gradient": 2.6691721205873253e-07,
+      "fit_and_prediction_seconds": 0.3955529999993814
+    },
+    {
+      "suite": "native_paired",
+      "backbone": "ecgfounder",
+      "dataset": "ningbo",
+      "shot": 5,
+      "seed": 0,
+      "method": "selected",
+      "covered_labels": 19,
+      "ap": 0.6464000482710501,
+      "auc": 0.9600717765047406,
+      "reference_abs_error": {
+        "ap": 5.0714263899465095e-09,
+        "auc": 6.18647726380317e-08
+      },
+      "reference_pass": true,
+      "max_gradient": 3.8807916672095946e-07,
+      "fit_and_prediction_seconds": 6.518284499999936
+    },
+    {
+      "suite": "fullpool",
+      "backbone": "ecgfounder",
+      "dataset": "sph",
+      "shot": 5,
+      "seed": 0,
+      "method": "selected",
+      "covered_labels": 13,
+      "ap": 0.7377278111714515,
+      "auc": 0.9625620241405298,
+      "reference_abs_error": {
+        "ap": 1.1566679092300802e-07,
+        "auc": 2.3764525347580445e-08
+      },
+      "reference_pass": true,
+      "max_gradient": 2.9749778937570616e-07,
+      "fit_and_prediction_seconds": 0.5933701000003566
+    },
+    {
+      "suite": "fullpool",
+      "backbone": "ecgfounder",
+      "dataset": "sph",
+      "shot": 5,
+      "seed": 0,
+      "method": "direct",
+      "covered_labels": 13,
+      "ap": 0.7186575902407834,
+      "auc": 0.9598898025952247,
+      "reference_abs_error": {
+        "ap": 0.0,
+        "auc": 1.1102230246251565e-16
+      },
+      "reference_pass": true,
+      "max_gradient": 2.9749778937570616e-07,
+      "fit_and_prediction_seconds": 0.7041616000005888
+    },
+    {
+      "suite": "native_raw",
+      "backbone": "ecgfounder",
+      "dataset": "sph",
+      "shot": 5,
+      "seed": 0,
+      "method": "selected",
+      "covered_labels": 13,
+      "ap": 0.7360858197120469,
+      "auc": 0.9643151302528497,
+      "reference_abs_error": {
+        "ap": 0.0,
+        "auc": 0.0
+      },
+      "reference_pass": true,
+      "max_gradient": 3.6212086280782037e-07,
+      "fit_and_prediction_seconds": 0.4952913000006447
+    },
+    {
+      "suite": "native_paired",
+      "backbone": "ecgfounder",
+      "dataset": "sph",
+      "shot": 5,
+      "seed": 0,
+      "method": "selected",
+      "covered_labels": 13,
+      "ap": 0.7251233225771314,
+      "auc": 0.9572152125718474,
+      "reference_abs_error": {
+        "ap": 0.0,
+        "auc": 0.0
+      },
+      "reference_pass": true,
+      "max_gradient": 5.235819071342556e-07,
+      "fit_and_prediction_seconds": 2.520036099999743
+    },
+    {
+      "suite": "fullpool",
+      "backbone": "merl",
+      "dataset": "ningbo",
+      "shot": 5,
+      "seed": 0,
+      "method": "selected",
+      "covered_labels": 22,
+      "ap": 0.4130355377640031,
+      "auc": 0.8717523488618499,
+      "reference_abs_error": {
+        "ap": 1.2813352617824236e-07,
+        "auc": 1.5039503187264103e-07
+      },
+      "reference_pass": true,
+      "max_gradient": 6.909250163279234e-07,
+      "fit_and_prediction_seconds": 0.8942100000003848
+    },
+    {
+      "suite": "fullpool",
+      "backbone": "merl",
+      "dataset": "ningbo",
+      "shot": 5,
+      "seed": 0,
+      "method": "direct",
+      "covered_labels": 22,
+      "ap": 0.3705974017814562,
+      "auc": 0.8568924982802816,
+      "reference_abs_error": {
+        "ap": 0.0,
+        "auc": 0.0
+      },
+      "reference_pass": true,
+      "max_gradient": 6.909250163279234e-07,
+      "fit_and_prediction_seconds": 0.9978901000004043
+    },
+    {
+      "suite": "fullpool",
+      "backbone": "merl",
+      "dataset": "sph",
+      "shot": 5,
+      "seed": 0,
+      "method": "selected",
+      "covered_labels": 13,
+      "ap": 0.547519822571446,
+      "auc": 0.8932946073433031,
+      "reference_abs_error": {
+        "ap": 2.9355461195201826e-07,
+        "auc": 5.768052702137538e-09
+      },
+      "reference_pass": true,
+      "max_gradient": 7.016793382890311e-07,
+      "fit_and_prediction_seconds": 0.5228681999997207
+    },
+    {
+      "suite": "fullpool",
+      "backbone": "merl",
+      "dataset": "sph",
+      "shot": 5,
+      "seed": 0,
+      "method": "direct",
+      "covered_labels": 13,
+      "ap": 0.5742187340446511,
+      "auc": 0.9024964313584797,
+      "reference_abs_error": {
+        "ap": 0.0,
+        "auc": 1.1102230246251565e-16
+      },
+      "reference_pass": true,
+      "max_gradient": 7.016793382890311e-07,
+      "fit_and_prediction_seconds": 0.6290382999995927
+    }
+  ],
+  "passed": true,
+  "metric_units": "fractions",
+  "reference_atol_fraction": 5e-05,
+  "selection": "archived Chapman-only config; no search in this command"
+}
