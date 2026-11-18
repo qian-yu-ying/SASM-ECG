@@ -1,0 +1,92 @@
+{
+  "selected": {
+    "ECGFounder": {
+      "LP": {
+        "raw_logit_threshold": -1.4047791264589344,
+        "raw_probability_threshold": 0.1970588313355327,
+        "temperature": 0.6015284805630736,
+        "temperature_logit_threshold": -2.3353493173655897,
+        "temperature_probability_threshold": 0.08823735353034437,
+        "development_macro_specificity": 0.9500005899587813
+      },
+      "Direct-LP": {
+        "raw_logit_threshold": -1.6653050554214253,
+        "raw_probability_threshold": 0.15905114112547633,
+        "temperature": 0.7679005989737272,
+        "temperature_logit_threshold": -2.1686466420875936,
+        "temperature_probability_threshold": 0.10260157618651866,
+        "development_macro_specificity": 0.9500005176841709
+      },
+      "Direct-LP-Refit-b": {
+        "raw_logit_threshold": -1.233594272999895,
+        "raw_probability_threshold": 0.22555296308745773,
+        "temperature": 0.5662892960080501,
+        "temperature_logit_threshold": -2.178381759457376,
+        "temperature_probability_threshold": 0.10170868160403497,
+        "development_macro_specificity": 0.9500005983440831
+      },
+      "SASM-Ens": {
+        "raw_logit_threshold": -1.6793853622465256,
+        "raw_probability_threshold": 0.15717687420939666,
+        "temperature": 1.0516156193706956,
+        "temperature_logit_threshold": -1.596957416105609,
+        "temperature_probability_threshold": 0.16840728761201287,
+        "development_macro_specificity": 0.9500001134465561
+      },
+      "MeanAnchor": {
+        "raw_logit_threshold": -1.6491615619374758,
+        "raw_probability_threshold": 0.1612222990756574,
+        "temperature": 1.041462341117342,
+        "temperature_logit_threshold": -1.5835057081066977,
+        "temperature_probability_threshold": 0.1702995611142905,
+        "development_macro_specificity": 0.9500001608692352
+      }
+    },
+    "MERL": {
+      "LP": {
+        "raw_logit_threshold": -0.38954730254827075,
+        "raw_probability_threshold": 0.4038262831469673,
+        "temperature": 0.9674864229753785,
+        "temperature_logit_threshold": -0.40263852111771115,
+        "temperature_probability_threshold": 0.4006785722302596,
+        "development_macro_specificity": 0.9500000075218155
+      },
+      "Direct-LP": {
+        "raw_logit_threshold": -0.9887395567162092,
+        "raw_probability_threshold": 0.2711611106754693,
+        "temperature": 1.198505211894612,
+        "temperature_logit_threshold": -0.8249772691044016,
+        "temperature_probability_threshold": 0.30470814642341837,
+        "development_macro_specificity": 0.9500004373941003
+      },
+      "Direct-LP-Refit-b": {
+        "raw_logit_threshold": -0.45069350418597265,
+        "raw_probability_threshold": 0.38919589187402825,
+        "temperature": 0.8427777132825092,
+        "temperature_logit_threshold": -0.5347715027140196,
+        "temperature_probability_threshold": 0.36940470003043946,
+        "development_macro_specificity": 0.9500001884140479
+      },
+      "SASM-Ens": {
+        "raw_logit_threshold": -0.34954975263054866,
+        "raw_probability_threshold": 0.4134916091532954,
+        "temperature": 1.174581585467959,
+        "temperature_logit_threshold": -0.29759512404690586,
+        "temperature_probability_threshold": 0.4261454800864292,
+        "development_macro_specificity": 0.9500004149878437
+      },
+      "MeanAnchor": {
+        "raw_logit_threshold": -0.31213342263013955,
+        "raw_probability_threshold": 0.4225940802046328,
+        "temperature": 1.1474945683136735,
+        "temperature_logit_threshold": -0.2720129848534641,
+        "temperature_probability_threshold": 0.432412977088684,
+        "development_macro_specificity": 0.9500002185109719
+      }
+    }
+  },
+  "source": "Chapman development only, 20 equally weighted episodes and 16 equally weighted negative class CDFs",
+  "parent_temperature_sha256": "fc2dbae8bdb24a6d26074aaffc57050c66a995beac115c7733cbf689f4f543e2",
+  "protocol_sha256": "1bdbed329c8bbdea7b1a109591de124ca7a4a6f4bf46b361ef4be97eb084b258",
+  "time": 1794975431.3121915
+}

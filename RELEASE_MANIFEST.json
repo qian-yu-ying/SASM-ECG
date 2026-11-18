@@ -1,5 +1,5 @@
 {
-  "release": "v1.2.0",
+  "release": "v1.3.0",
   "repository_contains_all_assets": true,
   "files": [
     {
@@ -22,14 +22,20 @@
     },
     {
       "file": "CHANGELOG.md",
-      "bytes": 702,
-      "sha256": "96febc210f9127364c42caa8187f3a669c06d8d21cbcd679470c5d570be823ab",
+      "bytes": 1117,
+      "sha256": "a47da4cb9c1da7c3a4c33ea4d62706e0c353a0ca79297e5341da3a9e6cce4b55",
       "delivery": "repository_and_code"
+    },
+    {
+      "file": "CITATION.cff",
+      "bytes": 661,
+      "sha256": "3f3b0ed3dce43459d0ccc2c8d61a4ff5959630b6230bfa5832c495c2b814a604",
+      "delivery": "code"
     },
     {
       "file": "data/ASSET_MANIFEST.json",
       "bytes": 52037,
-      "sha256": "b30c187b7f228198440624e9116ffcdbcb1d587972a6553ce02a52024546f071",
+      "sha256": "a82d909654426241f5531bfdb9cf213ec9a3ded84bb59ed2ff059bc3e31c0b68",
       "delivery": "repository_and_code"
     },
     {
@@ -1455,15 +1461,15 @@
       "delivery": "repository_and_cached_assets"
     },
     {
-      "file": "data/mappings/cpsc2018.npz",
-      "bytes": 1127,
-      "sha256": "f82b770a19c1ed7485b3d0fdbcb2570565129c226edc26652f9215c72d1f8276",
-      "delivery": "repository_and_code"
-    },
-    {
       "file": "data/mappings/cpsc2018_coverage.csv",
       "bytes": 585,
       "sha256": "50ec50614073d153caf60df4ac9d5a942539ee97d699768c51cd461635dc2a8f",
+      "delivery": "repository_and_code"
+    },
+    {
+      "file": "data/mappings/cpsc2018.npz",
+      "bytes": 1127,
+      "sha256": "f82b770a19c1ed7485b3d0fdbcb2570565129c226edc26652f9215c72d1f8276",
       "delivery": "repository_and_code"
     },
     {
@@ -1689,9 +1695,15 @@
       "delivery": "repository_and_cached_assets"
     },
     {
+      "file": "docs/DCA_THRESHOLD_SCOPE.md",
+      "bytes": 1616,
+      "sha256": "e60035e4c7cecfb503636cacec28093c49aeaff6457b3b5489227bb1db7be5ce",
+      "delivery": "code"
+    },
+    {
       "file": "docs/REPRODUCTION_SCOPE.md",
-      "bytes": 2739,
-      "sha256": "e04fba73386f9907fe0540e805d1d2fc0c49fe1b4f3a9ceb55ea0c57d9b70386",
+      "bytes": 2881,
+      "sha256": "d5b7cadb57a7d588fa8caa0b15c9f40c5616d26359f1f4afadbc383a128d6eba",
       "delivery": "repository_and_code"
     },
     {
@@ -1703,7 +1715,7 @@
     {
       "file": "examples/evaluate_cpsc9.py",
       "bytes": 9808,
-      "sha256": "7490a2040f2727eb49046be340108cd627167eaa54a22497f8854f71a91de43a",
+      "sha256": "92f77f968bc0092f2f4b311ad4bc03a0acea3ae726a5e41fc5ade8a3fdbf6019",
       "delivery": "repository_and_code"
     },
     {
@@ -1773,6 +1785,12 @@
       "delivery": "repository_and_code"
     },
     {
+      "file": "provenance/dca_threshold_protocol.json",
+      "bytes": 939,
+      "sha256": "a1e7a9fa9e322880a39fa4e3d3e257ffe993bb28fdadea3490adbb3ee014892c",
+      "delivery": "code"
+    },
+    {
       "file": "provenance/FEATURES_COMPLETE.json",
       "bytes": 1007,
       "sha256": "ece1defd6e194f9998e3e9d475fc27b9a87766b41d83056f776fa87eea70eb47",
@@ -1787,13 +1805,13 @@
     {
       "file": "pyproject.toml",
       "bytes": 441,
-      "sha256": "4eab85f36e02229bc6ca64b476804cb64b0c57db6849f32e90711cdfccce454c",
+      "sha256": "4788f97ba24c06f65c2f3b7289ace65de2c22edb550eec5652775e5c47fb236e",
       "delivery": "repository_and_code"
     },
     {
       "file": "README.md",
-      "bytes": 6665,
-      "sha256": "0abae8b6e4520f7ce3aca54058b79c185fc52ec373233cc84dfe445548ba1168",
+      "bytes": 8094,
+      "sha256": "4fee1cc208acb588b80de5324a67e722ab236af659c5da46fc9bec161e8753ca",
       "delivery": "repository_and_code"
     },
     {
@@ -1837,6 +1855,48 @@
       "bytes": 1548634,
       "sha256": "4c019fde5bdb51753769dc3d787d673ab62b5f0f71f2b64c06322e4439ee3140",
       "delivery": "repository_and_code"
+    },
+    {
+      "file": "results/dca_threshold/dca_paired_effects.csv",
+      "bytes": 174385,
+      "sha256": "a48c93199a11c33811fa033e1d0f43de26e28d11ade09925fd4b6e944ba73749",
+      "delivery": "results"
+    },
+    {
+      "file": "results/dca_threshold/dca_summary.csv",
+      "bytes": 287052,
+      "sha256": "1c5eafe1476834491b79400c4525f54428f985d2ffdb8fd513866f901a97102d",
+      "delivery": "results"
+    },
+    {
+      "file": "results/dca_threshold/global_thresholds.lock.json",
+      "bytes": 4081,
+      "sha256": "b195dc9409affa71e548fef55ec4f4dcbde93daafde83e09f186f3e0969929f8",
+      "delivery": "results"
+    },
+    {
+      "file": "results/dca_threshold/locked_threshold_paired_effects.csv",
+      "bytes": 148488,
+      "sha256": "003e3bb3eb5c1194259862fc9a946bc94fc722101e56eefa8c464d4831ba322f",
+      "delivery": "results"
+    },
+    {
+      "file": "results/dca_threshold/locked_threshold_summary.csv",
+      "bytes": 96262,
+      "sha256": "1a4d1382e12e9e278eaba5a5df53f2f04659fce03d1164b9a0449a4a76b9c928",
+      "delivery": "results"
+    },
+    {
+      "file": "results/dca_threshold/NUMERICAL_CHECKS.json",
+      "bytes": 916,
+      "sha256": "d8cfd1ab3a61838f06ca6015b4edf379f2d6045e43eacf1dca7bba8280d63e85",
+      "delivery": "results"
+    },
+    {
+      "file": "results/dca_threshold/README.md",
+      "bytes": 809,
+      "sha256": "c8e45a824d571e593a931d9259d769509254cfa0daf78e98ed67331309de9732",
+      "delivery": "results"
     },
     {
       "file": "results/figure2_classwise_summary.csv",
@@ -1955,7 +2015,7 @@
     {
       "file": "sasm/cache.py",
       "bytes": 1457,
-      "sha256": "2f86a2ddc44861135d3f2989eae6310f77b8cdf21311fbfd17a0e427b3b96e93",
+      "sha256": "b8efdc3deffc104bc5223f5bcfdd3e6274fe5203cb7980087300b8ee7b73d92b",
       "delivery": "repository_and_code"
     },
     {
@@ -1993,6 +2053,12 @@
       "bytes": 1642,
       "sha256": "ffdb765d47b87b0e647ca149b43f381159fb3c5cea35544ee40481401f4c296e",
       "delivery": "repository_and_code"
+    },
+    {
+      "file": "tests/test_dca_release.py",
+      "bytes": 1237,
+      "sha256": "9d2a24cdc7c08a6992bf1d4a0ec7e834dc8c86b31761b82dd5068d7b71e5351c",
+      "delivery": "code"
     },
     {
       "file": "tests/test_release.py",
@@ -2062,8 +2128,8 @@
     },
     {
       "file": "validation/RELEASE_CHECKS.json",
-      "bytes": 2202,
-      "sha256": "28ef11b423097508641cf7e686a1590aa28c0976818e64fd2f6b9300410c0304",
+      "bytes": 2451,
+      "sha256": "efd14738cbf18e8e61520a43d40d74e8c4af7ea689704ceb0235d3af6494a38b",
       "delivery": "repository_and_code"
     },
     {
@@ -2080,8 +2146,8 @@
     },
     {
       "file": "VERIFICATION.md",
-      "bytes": 1554,
-      "sha256": "02f66db47cd5b0ee306ce8764ca4f544647620ca03e6b4d23e49313094980d26",
+      "bytes": 1938,
+      "sha256": "aff3ead0f8e2c29fea5adf47efd894703444b182dcf9e9c7334f2dd0d3fc0c83",
       "delivery": "repository_and_code"
     }
   ]

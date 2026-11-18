@@ -1,5 +1,14 @@
 # Current release
 
+## v1.3.0 — 2026-11-18
+
+- Add DCA and locked-threshold result exports from the retrospective
+  supplementary analysis, with protocol and numerical-check records.
+- Add author citation metadata and clarify cached-feature replay, record-level
+  grouping and the absence of an end-to-end raw-waveform pipeline.
+- Keep the v1.2.0 nine-class CPSC2018 protocol, primary STE rule and archived
+  coefficients unchanged.
+
 ## v1.2.0 — 2026-11-18
 
 - Align CPSC2018 code, cached features, label order, roles and results with the

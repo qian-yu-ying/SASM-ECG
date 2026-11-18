@@ -1,4 +1,4 @@
-# Release validation — v1.2.0
+# Release validation — v1.3.0
 
 All checks were performed locally on CPU using already completed experiment
 assets. No remote experiment, worker, fitting job or GPU job was started.
@@ -22,3 +22,9 @@ See validation/RELEASE_CHECKS.json for scope and environment, per-condition
 validation JSONs for metrics, and docs/REPRODUCTION_SCOPE.md for exclusions.
 Package SHA-256 checks certify file identity, not clinical mapping correctness
 or absence of backbone pretraining overlap.
+
+The DCA and locked-threshold supplementary exports were checked separately:
+240 external episodes were scored, saved-coefficient replay error was 0, the
+independent DCA formula check was below 6e-17, and Raw/DevTemperature threshold
+decisions were identical. The threshold analysis is conditional on fixed query
+cohorts and does not establish prospective clinical performance.

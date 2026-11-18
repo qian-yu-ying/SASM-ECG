@@ -19,7 +19,7 @@ def load_cohort(root,backbone,cohort):
         query=z["indices"];query_y=z["labels"]
     if cohort=="cpsc2018":
         if meta.get("protocol_id")!="cpsc2018-nineclass-20261117-NORM" or features.shape[0]!=6877 or query_y.shape!=(4122,9) or weights.shape[-1]!=9:
-            raise ValueError("CPSC2018 cache/protocol mismatch: extract the complete v1.2.0 assets")
+            raise ValueError("CPSC2018 cache/protocol mismatch: extract the complete v1.3.0 assets")
         if cache.get("protocol_id")!=meta["protocol_id"]:
             raise ValueError("mixed CPSC2018 feature protocol")
     if features.shape[0]!=meta["released_records"]:

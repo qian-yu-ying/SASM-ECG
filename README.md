@@ -2,7 +2,9 @@
 
 Source-Anchored Symbolic Matching for few-shot multi-label ECG adaptation.
 
-**v1.2.0 is the current nine-class CPSC2018 reproduction snapshot.** It includes
+**v1.3.0 is the current release.** It includes the v1.2.0 nine-class CPSC2018
+reproduction snapshot plus the DCA and locked-threshold result exports. The
+nine-class snapshot includes
 6,877 CPSC2018 records, a fixed 2,755-record support pool and a 4,122-record
 query set. The labels, feature row order, support episodes, source mappings,
 per-class regularization and reference results belong to this same protocol.
@@ -23,15 +25,18 @@ python -m pip install -r requirements.txt
 python -m pip install --no-deps -e .
 ```
 
-The complete repository and GitHub's **v1.2.0 Source code (zip)** contain the
-matching cached arrays as well as the code. Either clone the repository or
-extract that complete source archive, then run the checks below. No separate
-cache download is required. The optional `SASM-ECG_v1.2.0_code.zip` release
-attachment is a lean code-only package for users who already have matching
-assets; use the complete source archive for a fresh reproduction.
+From the **v1.3.0 Release**, download `SASM-ECG_v1.3.0_code.zip` and check it
+against `SHA256SUMS.txt` before extracting. This code archive does not contain
+raw waveforms, encoder checkpoints or the ignored bulk feature arrays. The
+cached result exports and fixed episode metadata are included in the repository;
+the release also attaches the complete DCA/threshold result archive. The v1.2.0
+tag remains available as the preceding nine-class snapshot. The repository
+itself also contains the matching cached arrays and source-head assets used by
+the nine-class checks; no raw waveforms, private credentials or full encoder
+checkpoints are distributed.
 
 ```bash
-git clone --branch v1.2.0 --depth 1 https://github.com/qian-yu-ying/SASM-ECG.git
+git clone --branch v1.3.0 --depth 1 https://github.com/qian-yu-ying/SASM-ECG.git
 cd SASM-ECG
 ```
 
@@ -115,6 +120,25 @@ claimed here. Target fits are local CPU operations on frozen features; timing
 excludes encoder extraction and file I/O.
 
 ## Results, provenance and boundaries
+
+### DCA and locked thresholds
+
+Release v1.3.0 includes `results/dca_threshold/` exports from a retrospective
+analysis of existing frozen predictions. The DCA grid is
+`p_t = {0.02, 0.05, 0.10, 0.15, 0.20}` and reports raw and Chapman-development
+temperature versions for LP, Direct-LP, intercept-refitted Direct-LP,
+SASM-Ens and MeanAnchor. The locked-threshold export contains a global threshold
+selected from Chapman development negatives and a per-episode support-set
+negative 95th percentile.
+
+External query labels are read only after the threshold locks are written. The
+checks report coefficient replay error 0 and exact decision invariance under the
+paired temperature representation. These are retrospective record-level results
+with support-seed uncertainty conditional on fixed query sets; they are not
+prospective clinical deployment validation. The support-set quantile rule does
+not guarantee 95% specificity on an external cohort, and DCA values depend on
+the chosen risk threshold and cohort prevalence. See
+`docs/DCA_THRESHOLD_SCOPE.md` and the release asset for complete tables.
 
 - `results/`: current manuscript figure/table episode exports, plus CPSC9 primary
   per-seed and per-label metrics. These exports include methods beyond executable

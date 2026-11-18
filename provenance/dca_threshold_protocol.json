@@ -1,0 +1,23 @@
+{
+  "release": "v1.3.0",
+  "date": "2026-11-18",
+  "analysis": "retrospective DCA and locked threshold supplementary export",
+  "external_episodes": 240,
+  "backbones": ["ECGFounder", "MERL"],
+  "cohorts": ["Ningbo", "CPSC2018", "SPH"],
+  "shots": [5, 10],
+  "seeds": 20,
+  "methods": ["LP", "Direct-LP", "Direct-LP-Refit-b", "SASM-Ens", "MeanAnchor"],
+  "risk_thresholds": [0.02, 0.05, 0.1, 0.15, 0.2],
+  "dca_formula": "NB = TP/N - FP/N * p_t/(1-p_t)",
+  "threshold_rules": {
+    "A_ChapmanGlobal": "one global raw-logit threshold from Chapman development negatives",
+    "B_SupportNegative": "per-episode support-set negative empirical 95th percentile"
+  },
+  "query_labels_read_after_threshold_lock": true,
+  "primary_protocol_ste_lambda": 0,
+  "gpu_used": false,
+  "uncertainty": "paired support-seed bootstrap conditional on fixed query cohorts",
+  "clinical_deployment_validated": false,
+  "pretraining_overlap_status": "unknown"
+}

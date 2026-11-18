@@ -1,0 +1,26 @@
+{
+  "episodes": 240,
+  "dca_class_rows": 176000,
+  "dca_episode_rows": 12000,
+  "threshold_class_rows": 70400,
+  "threshold_episode_rows": 4800,
+  "threshold_temperature_decision_invariance": {
+    "specificity": 0.0,
+    "sensitivity": 0.0,
+    "PPV": 0.0,
+    "f1": 0.0
+  },
+  "independent_DCA_error": 5.551115123125783e-17,
+  "class_to_macro_error": 4.440892098500626e-16,
+  "historical_input_drift": [],
+  "support_coefficient_max_replay_error": 0.0,
+  "MeanAnchor_identical_fit_reconstructions": 200,
+  "min_support_negatives": 35,
+  "no_support_negative_rows": 0,
+  "primary_STE_lambda0_unchanged": true,
+  "GPU_used": false,
+  "clinical_deployment_validated": false,
+  "query_bootstrap_performed": false,
+  "CI_unit": "support-seed conditional on fixed query, not patients",
+  "source_label_selection_exposure": "prior Chapman development and prior external results already observed; retrospective analysis"
+}

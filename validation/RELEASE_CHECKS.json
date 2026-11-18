@@ -1,5 +1,5 @@
 {
-  "release": "v1.2.0",
+  "release": "v1.3.0",
   "date": "2026-11-18",
   "scope": "local CPU release checks on completed cached assets; no remote experiment executed",
   "python": "3.14.4",
@@ -75,5 +75,12 @@
     "fresh convex refits need not be bitwise-identical across BLAS environments",
     "STE-only fresh-fit AP is a diagnostic; archived-coefficient replay supplies the precise consistency check",
     "not an end-to-end raw-waveform experiment rerun"
-  ]
+  ],
+  "supplementary_dca_threshold": {
+    "episodes": 240,
+    "saved_coefficient_replay_error": 0.0,
+    "independent_dca_error": 5.551115123125783e-17,
+    "threshold_decision_invariance": true,
+    "clinical_deployment_validated": false
+  }
 }
