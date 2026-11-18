@@ -1,5 +1,5 @@
 {
-  "release": "v1.4.0",
+  "release": "v1.4.1",
   "date": "2026-11-18",
   "scope": "local CPU release checks on completed cached assets; no remote experiment executed",
   "python": "3.12.14",
@@ -64,7 +64,7 @@
     "max_error_fraction": 1.1102230246251565e-16,
     "passed": true
   },
-  "unit_tests": 10,
+  "unit_tests": 12,
   "other_checks": [
     "cross-cohort primary seed-0 paths, both shots and backbones",
     "Ningbo/SPH Route-B seed-0 paths",
@@ -84,9 +84,10 @@
     "clinical_deployment_validated": false
   },
   "supplementary_bundles": {
-    "results_files": 22,
+    "results_files": 26,
     "reference_pipeline_scripts": 17,
-    "supplementary_scripts": 14,
-    "py_compile_verified": true
+    "supplementary_scripts": 15,
+    "py_compile_verified": true,
+    "ste_paired_recomputation_verified": true
   }
 }

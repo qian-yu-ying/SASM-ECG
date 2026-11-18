@@ -25,3 +25,4 @@ that generated `results/supplementary/` and `results/dca_threshold/`.
 - `run_dca.py`, `summarize_dca.py`, `summarize.py`, `verify_artifacts.py`,
   `package_results.py`: Locked rule A/B thresholding (`global_thresholds.lock.json`),
   DCA aggregation, and SHA-256 artifact verification.
+- `ste_control.py`: Prespecified unmatched CPSC2018 `STE` sensitivity ($\tau=10.1$ zero-anchor and LP-score fallback controls) generating `results/supplementary/ste_episodes.csv`, `ste_summary.csv`, `ste_paired_effects.csv`, and `ste_protocol.lock.json` (Table S18).

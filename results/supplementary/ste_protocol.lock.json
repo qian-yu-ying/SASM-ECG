@@ -1,0 +1,42 @@
+{
+  "main_protocol_sha256": "217b65db528b3f2e510e7ca1fc561625fce0f9e4ef93ddee549e62feceac5fbe",
+  "main_verification_sha256": "e8c6a04a037afbc5cce1e789d1b60aaf36063802253a9ad7e24e1155165755fb",
+  "code_sha256": "9dbf51688fe2425aa20ba9ec9266c471c0280822ffdee8fa2df520574a9875ae",
+  "settings": {
+    "tau": 10.1,
+    "source_anchor": 0,
+    "backbones": [
+      "ECGFounder",
+      "MERL"
+    ],
+    "shots": [
+      5,
+      10
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "workers": 4,
+    "selection": false
+  },
+  "statistics": "four backbone/shot conditions times two contrasts versus current STE or LP; one eight-test Holm family; seed bootstrap conditional on fixed query"
+}

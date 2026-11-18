@@ -1,5 +1,5 @@
 {
-  "release": "v1.4.0",
+  "release": "v1.4.1",
   "repository_contains_all_assets": true,
   "files": [
     {
@@ -22,20 +22,20 @@
     },
     {
       "file": "CHANGELOG.md",
-      "bytes": 2168,
-      "sha256": "86e0ea7d2991e3e5960b44e5b2404dd43dd40554870750e235b1fdb006d82f98",
+      "bytes": 2829,
+      "sha256": "5c57e587c76359b5a5960c18e9c5c5beb74d41f83a64c1ef0fd7be6ac5684520",
       "delivery": "repository_and_code"
     },
     {
       "file": "CITATION.cff",
       "bytes": 661,
-      "sha256": "3c7a4f4ac60fb929b91f0d4bead6df2360d55486d303c6f3d431f6168ae41145",
+      "sha256": "c4d895907a41ed106f0c16f312db2ca5e75d1af226ae1f4ca7809f0a2f22efc8",
       "delivery": "repository_and_code"
     },
     {
       "file": "data/ASSET_MANIFEST.json",
       "bytes": 50652,
-      "sha256": "1be5b12b42e0dd56c9a3f401f10f4be15ec9ab385542fdc872c13331d34ecb00",
+      "sha256": "efea77a25ecf842ae570a5b7c2fbfdc626044f44708887e8a16ef28ba138e32c",
       "delivery": "repository_and_code"
     },
     {
@@ -1702,8 +1702,8 @@
     },
     {
       "file": "docs/REPRODUCTION_SCOPE.md",
-      "bytes": 3092,
-      "sha256": "5331d245352607306fdf4befc7ea5318db97203b1191ef1273b471ec387c942c",
+      "bytes": 3206,
+      "sha256": "79d21cb94694ac7bbb90ebbac87fb80719cde7fc944ed65245b25d09c75ad5fe",
       "delivery": "repository_and_code"
     },
     {
@@ -1715,7 +1715,7 @@
     {
       "file": "examples/evaluate_cpsc9.py",
       "bytes": 9676,
-      "sha256": "fea77ceabcb2658ae773c492de19daaf1f575f437592812999100f2eebf81540",
+      "sha256": "755fedd6af9d5eabadca77049773344799ddce705da8890a41434abf7036440c",
       "delivery": "repository_and_code"
     },
     {
@@ -1805,13 +1805,13 @@
     {
       "file": "pyproject.toml",
       "bytes": 426,
-      "sha256": "917f7523bc2b6e47b960f093c5982ead02bf96519ab62fb20081e1d83e182b87",
+      "sha256": "05385f0bbc78e5af6435fd73b3d5403340e3ff44301d146038d2745f6524e687",
       "delivery": "repository_and_code"
     },
     {
       "file": "README.md",
-      "bytes": 9283,
-      "sha256": "1e359096e0abc2d883e5168b8b552cf93825b0a390ee265bf8dfce2e1e5857f2",
+      "bytes": 10141,
+      "sha256": "e7dd4ecba11e67c98d4ba036aecf171b5f4959c0b6c5f01dd8b5ba0163c0424f",
       "delivery": "repository_and_code"
     },
     {
@@ -2067,6 +2067,30 @@
       "delivery": "results"
     },
     {
+      "file": "results/supplementary/ste_episodes.csv",
+      "bytes": 142627,
+      "sha256": "101cbe567cb9012e7c43406eb05689ba8ec149e06a021b2c49e174973db328b6",
+      "delivery": "results"
+    },
+    {
+      "file": "results/supplementary/ste_paired_effects.csv",
+      "bytes": 1131,
+      "sha256": "b56530c60ae45a09d539ad42de8332c8206d3b5987f81e0565c7d76da3fe0c25",
+      "delivery": "results"
+    },
+    {
+      "file": "results/supplementary/ste_protocol.lock.json",
+      "bytes": 857,
+      "sha256": "a10d6ba6a4a49e7d6dc7783f21fa0b46f9c36de8b4e69945f87b36d2d1289131",
+      "delivery": "results"
+    },
+    {
+      "file": "results/supplementary/ste_summary.csv",
+      "bytes": 10182,
+      "sha256": "2cc402fb3824a30b0993209436f29fddf565fedadc6482989d00fd1b50c6a6f8",
+      "delivery": "results"
+    },
+    {
       "file": "results/supplementary/subgroup_CI.csv",
       "bytes": 33917,
       "sha256": "58fdc9ff23e30aa28f81b6b120043712a6ae430a4386c95c174e29c83e04a15e",
@@ -2147,7 +2171,7 @@
     {
       "file": "sasm/cache.py",
       "bytes": 1430,
-      "sha256": "fe67844f625863619dd9ab74f3b7aa1ce5a65c316d707b8b8e47b8fc83009fa7",
+      "sha256": "2bdb3e595e41655735279647bc5e5b284e5c1c6d52282bd49457bf7398e1d10e",
       "delivery": "repository_and_code"
     },
     {
@@ -2302,8 +2326,8 @@
     },
     {
       "file": "scripts/supplementary/README.md",
-      "bytes": 1530,
-      "sha256": "98421aaed00472b43cfd2e0531c5aa4c0c8b9f44d97937623ab0837ade90e5a5",
+      "bytes": 1797,
+      "sha256": "84b0870b66e3793e798595efd1abeab432cc6e5d7dbe2c53a0484335fa62aed0",
       "delivery": "repository_and_code"
     },
     {
@@ -2316,6 +2340,12 @@
       "file": "scripts/supplementary/source_hg.py",
       "bytes": 5260,
       "sha256": "92b3cad9ec50478fded5191b013bd28f380cf4f202136ce4a138ffafd271abf6",
+      "delivery": "repository_and_code"
+    },
+    {
+      "file": "scripts/supplementary/ste_control.py",
+      "bytes": 5337,
+      "sha256": "ce4fc28dec4c185f3ddde795a7901a1862c5528b3ecd6a4e031e940bda52ab2c",
       "delivery": "repository_and_code"
     },
     {
@@ -2385,6 +2415,12 @@
       "delivery": "repository_and_code"
     },
     {
+      "file": "tests/test_ste_supplementary.py",
+      "bytes": 4174,
+      "sha256": "3747c7cda4d699ffc4aa976a4db163baa3c0d8ce26a969b6339d16fab3bb8a25",
+      "delivery": "repository_and_code"
+    },
+    {
       "file": "tests/test_unmatched_class.py",
       "bytes": 1251,
       "sha256": "5e06e40e895952d75963d53f506ff52738f91ab7de6e06acf78ee5cbcaf34ae8",
@@ -2446,8 +2482,8 @@
     },
     {
       "file": "validation/RELEASE_CHECKS.json",
-      "bytes": 2529,
-      "sha256": "d177e23f249038bca5ef723ed2a41d7e201a12ca8ba124bb6591bf1446dc6469",
+      "bytes": 2576,
+      "sha256": "a6e578c5240e3974b9cf002ba159e0f787230e98c36fc435619effbd0fe6b21e",
       "delivery": "repository_and_code"
     },
     {
@@ -2464,8 +2500,8 @@
     },
     {
       "file": "VERIFICATION.md",
-      "bytes": 1832,
-      "sha256": "dd8183432cfc5317aea34a2c899a006952c2b29213c766006879076b89c858d8",
+      "bytes": 1762,
+      "sha256": "528860e3e3730c648f049d51aef86136de3ae7976198b3b34561f08e815b2a74",
       "delivery": "repository_and_code"
     }
   ]

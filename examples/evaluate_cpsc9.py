@@ -126,7 +126,7 @@ def main():
                             rows.append(r)
                         diagnostics.append(dict(backbone=bb,normal=normal,shot=shot,seed=seed,solvers=dd))
                         print(json.dumps(dict(backbone=bb,normal=normal,shot=shot,seed=seed,passed=True,seconds=time.monotonic()-start)),flush=True)
-    out=dict(release='v1.4.0',protocol='cpsc2018-nineclass-20261117',rows=rows,diagnostics=diagnostics,passed=True,max_reference_error_fraction=worst,max_gated_reference_error_fraction=gateworst,reference_tolerance_fraction=5e-5,reference_gate_scopes=['all9','matched8'],STE='reported diagnostic; sensitive to solver/BLAS ranking ties; use replay_cpsc9.py for archived coefficients',metric_units='fractions',seconds=time.monotonic()-start)
+    out=dict(release='v1.4.1',protocol='cpsc2018-nineclass-20261117',rows=rows,diagnostics=diagnostics,passed=True,max_reference_error_fraction=worst,max_gated_reference_error_fraction=gateworst,reference_tolerance_fraction=5e-5,reference_gate_scopes=['all9','matched8'],STE='reported diagnostic; sensitive to solver/BLAS ranking ties; use replay_cpsc9.py for archived coefficients',metric_units='fractions',seconds=time.monotonic()-start)
     a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(out,indent=2),encoding='utf-8')
     print(json.dumps({k:v for k,v in out.items() if k not in ['rows','diagnostics']}))
 if __name__=='__main__':main()

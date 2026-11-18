@@ -1,4 +1,4 @@
-# Reproduction scope — v1.4.0
+# Reproduction scope — v1.4.1
 
 | Asset or operation | Status |
 |---|---|
@@ -9,7 +9,7 @@
 | Source-head refitting and source-only CV on frozen source features | Runnable |
 | Ningbo/SPH Route-B evaluation | Runnable with their existing protocol |
 | DCA and locked-threshold tables (`results/dca_threshold/`) | Preserved from v1.3.0 (identical summary CSV/lock subset also bundled in `results/supplementary/`); retrospective and not deployment validation |
-| Supplementary extension bundles (`results/supplementary/`, `scripts/supplementary/`) | Exported CSV/JSON provenance summaries with generation scripts; execution requires upstream public cohort caches and Chapman development features not redistributed here |
+| Supplementary extension bundles (`results/supplementary/`, `scripts/supplementary/`) | Exported CSV/JSON provenance summaries (including Table S18 per-seed `ste_episodes.csv` and `ste_paired_effects.csv` verified offline by `tests/test_ste_supplementary.py`) with generation scripts (`ste_control.py`, etc.); full upstream re-execution requires non-redistributed caches |
 | Full-study reference pipelines & FullFT/LoRA scripts (`scripts/reference_pipelines/gpu_worker.py`) | Archived reference implementations and configs; requires independent upstream dataset downloads and pretrained foundation checkpoints |
 | Complete Chapman target hyperparameter search | Not regenerated; target development features not distributed |
 

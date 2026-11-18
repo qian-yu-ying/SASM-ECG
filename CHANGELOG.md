@@ -1,5 +1,17 @@
 # Current release
 
+## v1.4.1 — 2026-11-18
+
+- Add complete per-seed Table S18 unmatched CPSC2018 `STE` sensitivity artifacts
+  (`results/supplementary/ste_episodes.csv`, `ste_summary.csv`,
+  `ste_paired_effects.csv`, `ste_protocol.lock.json`) and generator script
+  (`scripts/supplementary/ste_control.py`).
+- Add `tests/test_ste_supplementary.py` to independently recompute all Table S18
+  means, 10,000-seed bootstrap intervals, paired Wilcoxon $p$-values, and
+  8-contrast Holm corrections offline in CI.
+- Clarify manuscript author attribution (`Chenxi Yang, Guolan Deng, and Yi Wang`,
+  Chongqing University) directly in `README.md` alongside `CITATION.cff` and `LICENSE`.
+
 ## v1.4.0 — 2026-11-18
 
 - Consolidate all six supplementary CPU and clinical analysis exports under

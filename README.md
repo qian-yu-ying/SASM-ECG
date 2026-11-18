@@ -2,7 +2,7 @@
 
 Source-Anchored Symbolic Matching for few-shot multi-label ECG adaptation.
 
-**v1.4.0 is the current release.** It builds on the v1.2.0 nine-class CPSC2018
+**v1.4.1 is the current release.** It builds on the v1.2.0 nine-class CPSC2018
 reproduction snapshot and the v1.3.0 DCA/locked-threshold release by adding the
 complete `results/supplementary/` CSV/JSON bundles, `scripts/supplementary/`
 generation/audit scripts, and `scripts/reference_pipelines/` (including
@@ -16,6 +16,15 @@ This is a cached-feature reproduction package. It does not claim to regenerate
 every manuscript experiment from raw waveforms. SASM-authored code uses MIT;
 third-party data and model terms remain separate (see THIRD_PARTY_NOTICES.md).
 
+## Authors and Manuscript Correspondence
+
+Companion software and cached benchmark package for *"Source-Anchored Symbolic
+Matching: Few-Shot Multi-Label ECG Adaptation Across Heterogeneous Diagnostic
+Vocabularies"* (submitted to MDPI *Bioengineering*):
+
+- **Authors**: Chenxi Yang (`20242365@stu.cqu.edu.cn`), Guolan Deng (`dengguolan0201@163.com`), and Yi Wang (`yiwang@cqu.edu.cn`, corresponding author), College of Computer Science, Chongqing University.
+- **Repository Hosting**: Official author-maintained release archive under GitHub account `qian-yu-ying` (`https://github.com/qian-yu-ying/SASM-ECG`); see `CITATION.cff` and `LICENSE`.
+
 ## Install and obtain the matching assets
 
 Use Python 3.10 or newer:
@@ -28,7 +37,7 @@ python -m pip install -r requirements.txt
 python -m pip install --no-deps -e .
 ```
 
-From the **v1.4.0 Release**, download `SASM-ECG_v1.4.0_code.zip` and check it
+From the **v1.4.1 Release**, download `SASM-ECG_v1.4.1_code.zip` and check it
 against `SHA256SUMS.txt` before extracting. This code archive does not contain
 raw waveforms, encoder checkpoints or the ignored bulk feature arrays. The
 cached result exports and fixed episode metadata are included in the repository;
@@ -39,7 +48,7 @@ the nine-class checks; no raw waveforms, private credentials or full encoder
 checkpoints are distributed.
 
 ```bash
-git clone --branch v1.4.0 --depth 1 https://github.com/qian-yu-ying/SASM-ECG.git
+git clone --branch v1.4.1 --depth 1 https://github.com/qian-yu-ying/SASM-ECG.git
 cd SASM-ECG
 ```
 
@@ -153,7 +162,7 @@ the chosen risk threshold and cohort prevalence. See
 - `validation/`: actual release checks, with tolerances and scope.
 - `docs/REPRODUCTION_SCOPE.md`: what is runnable and what is results-only.
 
-### Supplementary revision bundles and reference pipelines (v1.4.0)
+### Supplementary revision bundles and reference pipelines (v1.4.1)
 
 - `results/supplementary/`: Exported summary CSVs and lock/audit JSONs across
   all six supplementary analyses—controlled `h`-vs-`g` PTB-XL ablation
@@ -161,7 +170,7 @@ the chosen risk threshold and cohort prevalence. See
   `DevTemperature` calibration (`calibration_*.csv`, `temperature.lock.json`),
   pinned Xeon Gold 5418Y BLAS-1 timing (`timing_*.csv`, `timing_environment.json`),
   48-slice age/sex subgroups (`subgroup_*.csv`, `DEMOGRAPHIC_CONFLICT_AUDIT.json`),
-  and the DCA/locked-threshold summary files (byte-identical to `results/dca_threshold/`).
+  DCA/locked-threshold summary files (byte-identical to `results/dca_threshold/`), and unmatched CPSC2018 `STE` $\tau=10.1$ per-seed & Holm paired statistics (`ste_episodes.csv`, `ste_summary.csv`, `ste_paired_effects.csv`, `ste_protocol.lock.json`, verified offline by `tests/test_ste_supplementary.py`).
 - `scripts/supplementary/`: Archived generator and audit scripts for the
   supplementary bundles (require upstream full cohort caches and Chapman
   development features).
