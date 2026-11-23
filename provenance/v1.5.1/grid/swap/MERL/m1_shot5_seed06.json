@@ -1,0 +1,302 @@
+{
+  "complete": true,
+  "mode": "swap",
+  "backbone": "MERL",
+  "cohort": "sph",
+  "shot": 5,
+  "seed": 6,
+  "method": "Tip-Adapter-F-ECG/BCE",
+  "development_only": true,
+  "spec_sha256": "1ae90e1b4a9d50d015ea787569e053e47b4a4491ff492ff39364f5eff0766e59",
+  "candidates": [
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 20,
+        "wd": 0.0001
+      },
+      "ap": 0.5626736451727644
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 20,
+        "wd": 0.01
+      },
+      "ap": 0.5626736451727644
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 50,
+        "wd": 0.0001
+      },
+      "ap": 0.5625433694357307
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 50,
+        "wd": 0.01
+      },
+      "ap": 0.5625433543952979
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 100,
+        "wd": 0.0001
+      },
+      "ap": 0.5628433444434298
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 100,
+        "wd": 0.01
+      },
+      "ap": 0.5628433119309896
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 20,
+        "wd": 0.0001
+      },
+      "ap": 0.562803387111807
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 20,
+        "wd": 0.01
+      },
+      "ap": 0.5627825399396504
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 50,
+        "wd": 0.0001
+      },
+      "ap": 0.562462909343941
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 50,
+        "wd": 0.01
+      },
+      "ap": 0.5624626997598063
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 100,
+        "wd": 0.0001
+      },
+      "ap": 0.5618620352316247
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 100,
+        "wd": 0.01
+      },
+      "ap": 0.5618617833276293
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 20,
+        "wd": 0.0001
+      },
+      "ap": 0.5624903018882911
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 20,
+        "wd": 0.01
+      },
+      "ap": 0.5624901580145596
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 50,
+        "wd": 0.0001
+      },
+      "ap": 0.5617804961729853
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 50,
+        "wd": 0.01
+      },
+      "ap": 0.5617804658432605
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 100,
+        "wd": 0.0001
+      },
+      "ap": 0.5609635836124885
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 100,
+        "wd": 0.01
+      },
+      "ap": 0.5609655552595624
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 20,
+        "wd": 0.0001
+      },
+      "ap": 0.5606812297228326
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 20,
+        "wd": 0.01
+      },
+      "ap": 0.5606814482173873
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 50,
+        "wd": 0.0001
+      },
+      "ap": 0.5607148842904237
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 50,
+        "wd": 0.01
+      },
+      "ap": 0.5607131306997813
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 100,
+        "wd": 0.0001
+      },
+      "ap": 0.5605367100313396
+    },
+    {
+      "config": {
+        "alpha": 5.0,
+        "beta": 5.0,
+        "encoding": "positive",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 100,
+        "wd": 0.01
+      },
+      "ap": 0.5605403097811495
+    }
+  ],
+  "seconds": 4.215999364852905
+}

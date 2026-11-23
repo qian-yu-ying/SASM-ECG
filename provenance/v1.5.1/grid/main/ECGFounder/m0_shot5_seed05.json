@@ -1,0 +1,1310 @@
+{
+  "complete": true,
+  "mode": "main",
+  "backbone": "ECGFounder",
+  "cohort": "chapman",
+  "shot": 5,
+  "seed": 5,
+  "method": "Tip-Adapter-ECG/BCE",
+  "development_only": true,
+  "spec_sha256": "1ae90e1b4a9d50d015ea787569e053e47b4a4491ff492ff39364f5eff0766e59",
+  "candidates": [
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 0.1
+      },
+      "ap": 0.5147365084619724
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 0.5
+      },
+      "ap": 0.5149354469222627
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 1.0
+      },
+      "ap": 0.5152113596551137
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 2.0
+      },
+      "ap": 0.5157085951544303
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 5.0
+      },
+      "ap": 0.5173183879088417
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 10.0
+      },
+      "ap": 0.519623863469947
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 0.1
+      },
+      "ap": 0.5147148429957205
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 0.5
+      },
+      "ap": 0.5148205834101565
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 1.0
+      },
+      "ap": 0.5149354469222627
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 2.0
+      },
+      "ap": 0.5152113596551137
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 5.0
+      },
+      "ap": 0.5159530459830177
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 10.0
+      },
+      "ap": 0.5173183879088417
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5147886126068473
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5152743295084972
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5158056774505007
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5169991852358118
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5198144005398513
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5241695895811845
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5147412649552515
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5149946729208932
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5152743295084972
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5158056774505007
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5177013087417537
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5198144005398513
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 0.1
+      },
+      "ap": 0.5150341057889214
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 0.5
+      },
+      "ap": 0.5162298784385007
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 1.0
+      },
+      "ap": 0.518068292949597
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 2.0
+      },
+      "ap": 0.5203626049043593
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 5.0
+      },
+      "ap": 0.5283209740765361
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 10.0
+      },
+      "ap": 0.5392648554244648
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 0.1
+      },
+      "ap": 0.5148846760340923
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 0.5
+      },
+      "ap": 0.5154766129811228
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 1.0
+      },
+      "ap": 0.5162298784385007
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 2.0
+      },
+      "ap": 0.518068292949597
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 5.0
+      },
+      "ap": 0.5215756285300626
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 10.0
+      },
+      "ap": 0.5283209740765361
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5154017619020004
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 0.5
+      },
+      "ap": 0.51848312591786
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5214499187871698
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5278217161494148
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5431883153663153
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5596295324723157
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5150974162744162
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5166956850151918
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 1.0
+      },
+      "ap": 0.51848312591786
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5214499187871698
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5312748091020287
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5431883153663153
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5166556910045862
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5226607498171527
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5312782815520479
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5424830784657819
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5597911945584588
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 10.0
+      },
+      "ap": 0.557025128261465
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5156628746265917
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5192883107765067
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5226607498171527
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5312782815520479
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5472510882372223
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5597911945584588
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5181807836302246
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 0.5
+      },
+      "ap": 0.529559483345956
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5387799013758765
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5466335895616012
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5319835774947744
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5025644091771388
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5164215766491614
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 0.5
+      },
+      "ap": 0.522666828508539
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5295584614077427
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5387797246225127
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5456997912001813
+    },
+    {
+      "config": {
+        "space": "raw_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5319837193856333
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 0.1
+      },
+      "ap": 0.5147643157199657
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 0.5
+      },
+      "ap": 0.5150587899817952
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 1.0
+      },
+      "ap": 0.5154894578484281
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 2.0
+      },
+      "ap": 0.5163110659999032
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 5.0
+      },
+      "ap": 0.5187317805637128
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 0.5,
+        "alpha": 10.0
+      },
+      "ap": 0.5220630288981669
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 0.1
+      },
+      "ap": 0.5147216581877418
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 0.5
+      },
+      "ap": 0.5148604825953152
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 1.0
+      },
+      "ap": 0.5150587899817952
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 2.0
+      },
+      "ap": 0.5154894578484281
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 5.0
+      },
+      "ap": 0.5166637014808597
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 0.5,
+        "alpha": 10.0
+      },
+      "ap": 0.5187317805637128
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5148396901810769
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5155464467370706
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5164242610295948
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5181526808045143
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5225290928615489
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 1.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5296016128510879
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5147664274621035
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5150788510681396
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5155464467370706
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5164242610295948
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5190195302653785
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 1.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5225290928615489
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 0.1
+      },
+      "ap": 0.5151941936043049
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 0.5
+      },
+      "ap": 0.5173744650632821
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 1.0
+      },
+      "ap": 0.5199940412785773
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 2.0
+      },
+      "ap": 0.5247567880013844
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 5.0
+      },
+      "ap": 0.5362413694301452
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 2.5,
+        "alpha": 10.0
+      },
+      "ap": 0.5489301905019934
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 0.1
+      },
+      "ap": 0.5149392214466016
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 0.5
+      },
+      "ap": 0.5160539509787809
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 1.0
+      },
+      "ap": 0.5173744650632821
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 2.0
+      },
+      "ap": 0.5199940412785773
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 5.0
+      },
+      "ap": 0.5269860901186156
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 2.5,
+        "alpha": 10.0
+      },
+      "ap": 0.5362413694301452
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5162481366615588
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 0.5
+      },
+      "ap": 0.521538657599703
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5277120793562609
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5376472249940809
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5517282020797132
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 5.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5647555038401423
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5154342725779355
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5183425485058277
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 1.0
+      },
+      "ap": 0.521538657599703
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5277120793562609
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5406102043518954
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 5.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5517282020797132
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5178932816387065
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5297934919020915
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5386482656921275
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5492406452564262
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5558765600264586
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 10.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5456781844639431
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5165293024814741
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5226821015729533
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5297934812689837
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5386483664459905
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5525419365329735
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 10.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5558768362190295
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5195963742899086
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5334695758273412
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5423608312246626
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5474722624625303
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5361583749814783
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "signed",
+        "beta": 20.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5199547655492677
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 0.1
+      },
+      "ap": 0.5171519145019631
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 0.5
+      },
+      "ap": 0.5259248223724385
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 1.0
+      },
+      "ap": 0.5334591765343331
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 2.0
+      },
+      "ap": 0.5422309741553865
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 5.0
+      },
+      "ap": 0.5466601090883616
+    },
+    {
+      "config": {
+        "space": "std_l2",
+        "encoding": "positive",
+        "beta": 20.0,
+        "alpha": 10.0
+      },
+      "ap": 0.5358997979671719
+    }
+  ],
+  "seconds": 4.032907724380493
+}

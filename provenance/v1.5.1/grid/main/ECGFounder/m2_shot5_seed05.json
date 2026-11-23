@@ -1,0 +1,1229 @@
+{
+  "complete": true,
+  "mode": "main",
+  "backbone": "ECGFounder",
+  "cohort": "chapman",
+  "shot": 5,
+  "seed": 5,
+  "method": "TaskRes-ECG/BCE",
+  "development_only": true,
+  "spec_sha256": "1ae90e1b4a9d50d015ea787569e053e47b4a4491ff492ff39364f5eff0766e59",
+  "candidates": [
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.0,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5323662416431874
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.0,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5606333602541351
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.0,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5614574573459382
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.01,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5323641875379839
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.01,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5606518489590211
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.01,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5615130497066443
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.1,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5323770035344015
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.1,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5607408861928235
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.1,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5622877699961933
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 1.0,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5324046782522368
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 1.0,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5609873835222507
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 1.0,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5665162377594919
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 10.0,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.531557843658622
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 10.0,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5566241537872929
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 10.0,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5594000964969404
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.0,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.548837982048091
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.0,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5598327534263096
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.0,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5445274146217473
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.01,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5488395197276593
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.01,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5598608351748673
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.01,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5445893343560504
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.1,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5488439260112185
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.1,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.560094368743903
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.1,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5455843697523164
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 1.0,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5490825013937538
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 1.0,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.56201638874065
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 1.0,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5541545554039439
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 10.0,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5489753716772192
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 10.0,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5686830852028706
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 10.0,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5719551580563157
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.0,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5604877378033797
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.0,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5443949999489219
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.0,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5227376455359083
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.01,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5604880137449295
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.01,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5444393336042398
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.01,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5227935239244339
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.1,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5604967018602051
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.1,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5446987413253613
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.1,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5234263977922933
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 1.0,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5605626527061031
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 1.0,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5468126223116975
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 1.0,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5303196520209121
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 10.0,
+        "lr": 0.001,
+        "epochs": 20
+      },
+      "ap": 0.5606898807577436
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 10.0,
+        "lr": 0.005,
+        "epochs": 20
+      },
+      "ap": 0.5635169206885241
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 10.0,
+        "lr": 0.01,
+        "epochs": 20
+      },
+      "ap": 0.5651257375948475
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.0,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5479662190312824
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.0,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5653009406099129
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.0,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5573733341735081
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.01,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5479544469407952
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.01,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.565481626490629
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.01,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.557995764044339
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.1,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5481346598745549
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.1,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5664665130984646
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.1,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5636543039007496
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 1.0,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5482771445554157
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 1.0,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5692762188262099
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 1.0,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.573319754902428
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 10.0,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5448882850733511
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 10.0,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5590602303053369
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 10.0,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5598039715826051
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.0,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5635945665205039
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.0,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5525044047398452
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.0,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5317418186821323
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.01,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5635779130310493
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.01,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5526242288905392
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.01,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5323101511014976
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.1,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.563810623588189
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.1,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5539979948633521
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.1,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5376865341464029
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 1.0,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5641191647406987
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 1.0,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5651694231609612
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 1.0,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5665465790672518
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 10.0,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5640103366658111
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 10.0,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5735959597412073
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 10.0,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5754059322967287
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.0,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5649802960579504
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.0,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5315925794379459
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.0,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.506391743741831
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.01,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.564977174305747
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.01,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5317346663876562
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.01,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5068868716168355
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.1,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5650344869622022
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.1,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5332950183815105
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.1,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5122781613369107
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 1.0,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.5654444196245976
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 1.0,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5444022550806626
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 1.0,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5412235288261745
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 10.0,
+        "lr": 0.001,
+        "epochs": 50
+      },
+      "ap": 0.567691806513721
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 10.0,
+        "lr": 0.005,
+        "epochs": 50
+      },
+      "ap": 0.5753699301109606
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 10.0,
+        "lr": 0.01,
+        "epochs": 50
+      },
+      "ap": 0.5775434397233674
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.0,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.561069867307159
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.0,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5646493465757845
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.0,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5536029882290466
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.01,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5610968181263446
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.01,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5650779174179414
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.01,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5563924425988155
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.1,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5611197879341039
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.1,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5684810551703894
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 0.1,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5692485534626786
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 1.0,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5601113134729361
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 1.0,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5733719614989365
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 1.0,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5758142067015758
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 10.0,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5526129742658052
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 10.0,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5596111551312862
+    },
+    {
+      "config": {
+        "gamma": 0.2,
+        "lambda_res": 10.0,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5592524002535967
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.0,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5673782440272754
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.0,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5470213022661938
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.0,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.527461201025695
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.01,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5673980252195534
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.01,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5476205829076313
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.01,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5301772907853026
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.1,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.567392495123969
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.1,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5535981211624856
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 0.1,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5460613475259701
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 1.0,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5679527033582289
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 1.0,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5730960101055177
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 1.0,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5757361493181423
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 10.0,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5692500297936338
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 10.0,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5748513181318002
+    },
+    {
+      "config": {
+        "gamma": 0.5,
+        "lambda_res": 10.0,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5758046973332657
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.0,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5641538434341766
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.0,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5272623284245028
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.0,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5054400821988334
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.01,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5641752111113925
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.01,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5279502974115234
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.01,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.507473164579217
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.1,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.564386927981542
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.1,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5335496777346407
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 0.1,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.522054513644161
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 1.0,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5670188097392223
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 1.0,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.5629622252408771
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 1.0,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5702308561694132
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 10.0,
+        "lr": 0.001,
+        "epochs": 100
+      },
+      "ap": 0.5719505162793558
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 10.0,
+        "lr": 0.005,
+        "epochs": 100
+      },
+      "ap": 0.577140745484662
+    },
+    {
+      "config": {
+        "gamma": 1.0,
+        "lambda_res": 10.0,
+        "lr": 0.01,
+        "epochs": 100
+      },
+      "ap": 0.5777903548266674
+    }
+  ],
+  "seconds": 7.345209836959839
+}

@@ -1,0 +1,302 @@
+{
+  "complete": true,
+  "mode": "main",
+  "backbone": "ECGFounder",
+  "cohort": "chapman",
+  "shot": 10,
+  "seed": 9,
+  "method": "Tip-Adapter-F-ECG/BCE",
+  "development_only": true,
+  "spec_sha256": "1ae90e1b4a9d50d015ea787569e053e47b4a4491ff492ff39364f5eff0766e59",
+  "candidates": [
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 20,
+        "wd": 0.0001
+      },
+      "ap": 0.5653047735672665
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 20,
+        "wd": 0.01
+      },
+      "ap": 0.5653047735672665
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 50,
+        "wd": 0.0001
+      },
+      "ap": 0.5665729481052055
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 50,
+        "wd": 0.01
+      },
+      "ap": 0.5665729587966362
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 100,
+        "wd": 0.0001
+      },
+      "ap": 0.5682749047860536
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0001,
+        "epochs": 100,
+        "wd": 0.01
+      },
+      "ap": 0.5682749310964443
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 20,
+        "wd": 0.0001
+      },
+      "ap": 0.568892472031642
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 20,
+        "wd": 0.01
+      },
+      "ap": 0.5688925156224114
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 50,
+        "wd": 0.0001
+      },
+      "ap": 0.5707631760635408
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 50,
+        "wd": 0.01
+      },
+      "ap": 0.5707630635084114
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 100,
+        "wd": 0.0001
+      },
+      "ap": 0.5716340463049743
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.0005,
+        "epochs": 100,
+        "wd": 0.01
+      },
+      "ap": 0.5716337260742967
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 20,
+        "wd": 0.0001
+      },
+      "ap": 0.5707961102264273
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 20,
+        "wd": 0.01
+      },
+      "ap": 0.5707961758533604
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 50,
+        "wd": 0.0001
+      },
+      "ap": 0.5717143005399826
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 50,
+        "wd": 0.01
+      },
+      "ap": 0.5717142705937057
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 100,
+        "wd": 0.0001
+      },
+      "ap": 0.5719645180979047
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.001,
+        "epochs": 100,
+        "wd": 0.01
+      },
+      "ap": 0.5719634609930767
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 20,
+        "wd": 0.0001
+      },
+      "ap": 0.571967384761633
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 20,
+        "wd": 0.01
+      },
+      "ap": 0.5719684695845989
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 50,
+        "wd": 0.0001
+      },
+      "ap": 0.5728225644356018
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 50,
+        "wd": 0.01
+      },
+      "ap": 0.572822743442966
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 100,
+        "wd": 0.0001
+      },
+      "ap": 0.5729565122043672
+    },
+    {
+      "config": {
+        "alpha": 10.0,
+        "beta": 5.0,
+        "encoding": "signed",
+        "space": "std_l2",
+        "lr": 0.005,
+        "epochs": 100,
+        "wd": 0.01
+      },
+      "ap": 0.5729566723902535
+    }
+  ],
+  "seconds": 8.702961444854736
+}

@@ -1,0 +1,27 @@
+{
+  "all_passed": true,
+  "aggregate_checks": 1200,
+  "max_abs_fraction_error": 3.3306690738754696e-16,
+  "tolerance_fraction": 1e-12,
+  "main_12_condition_ap_percent": {
+    "Direct-LP": 60.10394536083295,
+    "LP": 53.40724336275652,
+    "LP++-ECG/BCE": 59.2162379382471,
+    "MeanAnchor": 59.84122475332475,
+    "SASM-Ens": 59.84228929022216,
+    "TaskRes-ECG/BCE": 60.07585873143911,
+    "Tip-Adapter-ECG/BCE": 59.37057914602424,
+    "Tip-Adapter-F-ECG/BCE": 59.611147918104166
+  },
+  "scope_note": "CPSC_matched8_other_all includes all 12 conditions; only CPSC excludes STE.",
+  "boundary": "CSV aggregation replay only; no fitting, waveform processing or bootstrap regeneration.",
+  "release": "v1.5.2",
+  "preserved_extension_files_verified": 699,
+  "inherited_numeric_asset_files_verified": 276,
+  "existing_unit_tests_passed": 12,
+  "credential_pattern_scan": "no_matches_in_scanned_text_files",
+  "experiment_refit_performed": false,
+  "remote_compute_used": false,
+  "archive_source_compilation": "all tracked/new Python files passed AST parse",
+  "verification_boundary": "Aggregation, byte identity and existing tests; no independent audit or full prediction/bootstrap regeneration claimed."
+}

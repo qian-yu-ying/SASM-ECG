@@ -2,15 +2,22 @@
 
 Source-Anchored Symbolic Matching for few-shot multi-label ECG adaptation.
 
-**v1.4.1 is the current release.** It builds on the v1.2.0 nine-class CPSC2018
-reproduction snapshot and the v1.3.0 DCA/locked-threshold release by adding the
-complete `results/supplementary/` CSV/JSON bundles, `scripts/supplementary/`
-generation/audit scripts, and `scripts/reference_pipelines/` (including
-raw-waveform `FullFT`/`LoRA` reference code in `gpu_worker.py`). The
-nine-class snapshot includes
-6,877 CPSC2018 records, a fixed 2,755-record support pool and a 4,122-record
-query set. The labels, feature row order, support episodes, source mappings,
-per-class regularization and reference results belong to this same protocol.
+**v1.5.2 is the current code/results archival release.** It preserves the
+v1.4.1 cached-feature benchmark and adds the v1.5.1 shared-prior multi-label
+adapter experiments and v1.5.2 solver, development-grid, calibration-CI,
+pathology-DCA and interface-forensics exports. No experiments or historical
+result values were changed by this archival update.
+
+Start with [the v1.5 reproduction guide](docs/V1_5_REPRODUCTION.md). A lightweight,
+standard-library-only check recomputes the released aggregate metrics:
+
+```bash
+python examples/replay_v15_summaries.py --output outputs/v15_summary_replay.json
+python examples/verify_release_manifest.py
+```
+
+The archived research scripts and the directly runnable summary replay have
+different input requirements; the guide identifies those boundaries.
 
 This is a cached-feature reproduction package. It does not claim to regenerate
 every manuscript experiment from raw waveforms. SASM-authored code uses MIT;
@@ -20,7 +27,7 @@ third-party data and model terms remain separate (see THIRD_PARTY_NOTICES.md).
 
 Companion software and cached benchmark package for *"Source-Anchored Symbolic
 Matching: Few-Shot Multi-Label ECG Adaptation Across Heterogeneous Diagnostic
-Vocabularies"* (submitted to MDPI *Bioengineering*):
+Vocabularies"* (BSPC manuscript companion archive):
 
 - **Authors**: Chenxi Yang (`20242365@stu.cqu.edu.cn`), Guolan Deng (`dengguolan0201@163.com`), and Yi Wang (`yiwang@cqu.edu.cn`, corresponding author), College of Computer Science, Chongqing University.
 - **Repository Hosting**: Official author-maintained release archive under GitHub account `qian-yu-ying` (`https://github.com/qian-yu-ying/SASM-ECG`); see `CITATION.cff` and `LICENSE`.
@@ -37,7 +44,7 @@ python -m pip install -r requirements.txt
 python -m pip install --no-deps -e .
 ```
 
-From the **v1.4.1 Release**, download `SASM-ECG_v1.4.1_code.zip` and check it
+From the **v1.5.2 Release**, download `SASM-ECG_v1.5.2_code.zip` and check it
 against `SHA256SUMS.txt` before extracting. This code archive does not contain
 raw waveforms, encoder checkpoints or the ignored bulk feature arrays. The
 cached result exports and fixed episode metadata are included in the repository;
@@ -48,7 +55,7 @@ the nine-class checks; no raw waveforms, private credentials or full encoder
 checkpoints are distributed.
 
 ```bash
-git clone --branch v1.4.1 --depth 1 https://github.com/qian-yu-ying/SASM-ECG.git
+git clone --branch v1.5.2 --depth 1 https://github.com/qian-yu-ying/SASM-ECG.git
 cd SASM-ECG
 ```
 
@@ -184,3 +191,22 @@ feature matrices, or full third-party encoder checkpoints are distributed.
 Standalone execution covers cached-feature adaptation (`smoke_check.py` and
 `examples/`). Integrity hashes verify package identity; they do not certify
 clinical equivalence of every mapped label.
+
+## Modern adapter and micro-revision archive (v1.5.2)
+
+- `scripts/v1.5.1_adapters/`, `results/v1.5.1_adapters/`: four explicitly
+  named ECG/BCE adapter extensions, configuration locks, per-episode metrics,
+  paired tests, query-cluster intervals, role swap, clinical summaries and timings.
+- `scripts/v1.5.2_micro/`, `results/v1.5.2_micro/`: same-solver attribution,
+  expanded development-grid analysis, paired calibration intervals, pathology
+  DCA, interface forensics and Figure 5 source data/rendering script.
+- `provenance/v1.5.1/`, `provenance/v1.5.2/`: development-grid outputs,
+  bootstrap draws, condition-level exports and original execution manifests.
+- `scripts/historical_runtime/`: preserved local runtime dependencies whose
+  hashes match the historical dependency manifest.
+
+The full new extension payload is also attached as
+`SASM_v1.5.2_extensions_archive.zip`. Complete v1.5 per-record prediction and
+model caches, Chapman development feature matrices, raw waveforms and foundation
+checkpoints are not included. The archive scripts retain original host paths;
+summary replay is portable and does not load those scripts or contact a server.

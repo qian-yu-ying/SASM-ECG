@@ -1,0 +1,80 @@
+{
+  "selected": {
+    "chapman": {
+      "ECGFounder": {
+        "pure": {
+          "alpha": 0.0,
+          "lam": 30.0,
+          "mean_dev_ap": 0.5913238786920464
+        },
+        "dual": {
+          "alpha": 10.0,
+          "lam": 40.0,
+          "mean_dev_ap": 0.5929663339743002
+        },
+        "global48": {
+          "alpha": 10.0,
+          "lam": 40.0,
+          "mean_dev_ap": 0.5929663339743002
+        }
+      },
+      "MERL": {
+        "pure": {
+          "alpha": 0.0,
+          "lam": 40.0,
+          "mean_dev_ap": 0.41062770217074424
+        },
+        "dual": {
+          "alpha": 1.0,
+          "lam": 40.0,
+          "mean_dev_ap": 0.410698764750461
+        },
+        "global48": {
+          "alpha": 1.0,
+          "lam": 40.0,
+          "mean_dev_ap": 0.410698764750461
+        }
+      }
+    },
+    "sph": {
+      "ECGFounder": {
+        "pure": {
+          "alpha": 0.0,
+          "lam": 100.0,
+          "mean_dev_ap": 0.7539509251661658
+        },
+        "dual": {
+          "alpha": 10.0,
+          "lam": 100.0,
+          "mean_dev_ap": 0.7541939265266477
+        },
+        "global48": {
+          "alpha": 10.0,
+          "lam": 100.0,
+          "mean_dev_ap": 0.7541939265266477
+        }
+      },
+      "MERL": {
+        "pure": {
+          "alpha": 0.0,
+          "lam": 100.0,
+          "mean_dev_ap": 0.5599897552087197
+        },
+        "dual": {
+          "alpha": 1.0,
+          "lam": 100.0,
+          "mean_dev_ap": 0.5599959117827986
+        },
+        "global48": {
+          "alpha": 1.0,
+          "lam": 100.0,
+          "mean_dev_ap": 0.5599959117827986
+        }
+      }
+    }
+  },
+  "spec_sha256": "2db81e9bef247f43c9eeae956bb7d67329dc48e9fdcd87a60983abe3587eaaa2",
+  "external_labels_used": false,
+  "tie_rule": "descending exact mean dev AP; ascending alpha then lambda",
+  "interpretation": "development-cohort sensitivity, not new untouched external validation"
+}

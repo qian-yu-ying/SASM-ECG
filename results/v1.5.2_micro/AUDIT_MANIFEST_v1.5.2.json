@@ -1,0 +1,276 @@
+{
+  "all_assertions_passed": true,
+  "spec_sha256": "2db81e9bef247f43c9eeae956bb7d67329dc48e9fdcd87a60983abe3587eaaa2",
+  "fit_code_manifest": {
+    "micro_common.py": "be6100c9e77cbf3d056b454ddbd2e0597f02fa88ae0a43fe0e7fd529cf98b9d0",
+    "solver.py": "199284663fa37f3fea53d9ca0f51eaefa8fa7e56d36a53d21729856c5d6dacc5",
+    "gate_v152.py": "d3e47ea39ca96f8d13622c805c79df0063ca9cd86fad4d75a3c2732610253037",
+    "modules12.py": "178f87b12cdb0041a608933a038fb1f600ccbdc9da7c700f48edb748a578e89a"
+  },
+  "postprocess_code_manifest": {
+    "module3.py": "56438f14d2bb1a40f20eced73423290a14758cba73c0de7654a9ac8a93658bd4",
+    "plot_figure5_v152.py": "47dc24de5bf4ca64140a7fad57f3b2ecc7b3b451b03c369221354f0f25b14aec",
+    "forensics.py": "ea5a1b2c4a457da4851b7024504666f9e23ca68b8b59375f46fa8d102626f55f",
+    "package_micro.py": "c658ff447dc8a400b279782cc323e7ca4eca180bf3bcdc6f77fe2f32803a3f9b"
+  },
+  "environment": {
+    "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 23:02:24) [GCC 14.4.0]",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1",
+    "torch": "2.8.0+cu128",
+    "CPU": "Intel(R) Xeon(R) Gold 5418Y",
+    "CUDA_VISIBLE_DEVICES": "",
+    "max_worker_count": 4,
+    "BLAS_threads_per_worker": 1
+  },
+  "readonly_check": {
+    "passed": true,
+    "files_checked": 5704,
+    "changed_paths": []
+  },
+  "CSV_checks": [
+    {
+      "file": "module3_selected_endpoints_dca.csv",
+      "rows": 2880,
+      "intentional_missing_columns": []
+    },
+    {
+      "file": "module3_pathology_dca_wins.csv",
+      "rows": 30,
+      "intentional_missing_columns": []
+    },
+    {
+      "file": "module2_roleswap_expanded_check.csv",
+      "rows": 120,
+      "intentional_missing_columns": []
+    },
+    {
+      "file": "module3_reliability_bins_ecgf_merl.csv",
+      "rows": 120,
+      "intentional_missing_columns": [
+        "mean_predicted_probability",
+        "empirical_positive_rate"
+      ]
+    },
+    {
+      "file": "module3_pathology_dca_summary.csv",
+      "rows": 2880,
+      "intentional_missing_columns": []
+    },
+    {
+      "file": "module3_pathology_dca_episodes.csv",
+      "rows": 57600,
+      "intentional_missing_columns": []
+    },
+    {
+      "file": "module1_paired_stats_holm.csv",
+      "rows": 2688,
+      "intentional_missing_columns": [
+        "p_raw",
+        "p_holm"
+      ]
+    },
+    {
+      "file": "module3_calib_query_cluster_ci_scope.csv",
+      "rows": 108,
+      "intentional_missing_columns": [
+        "ci_low",
+        "ci_high"
+      ]
+    },
+    {
+      "file": "module3_calib_query_cluster_ci_12cond.csv",
+      "rows": 432,
+      "intentional_missing_columns": [
+        "ci_low",
+        "ci_high"
+      ]
+    },
+    {
+      "file": "module3_classwise_calibration_44endpoints.csv",
+      "rows": 2816,
+      "intentional_missing_columns": []
+    },
+    {
+      "file": "module2_expanded_dev_grid.csv",
+      "rows": 192,
+      "intentional_missing_columns": []
+    },
+    {
+      "file": "module2_roleswap_episode_metrics.csv",
+      "rows": 2400,
+      "intentional_missing_columns": []
+    },
+    {
+      "file": "module1_episode_metrics.csv",
+      "rows": 11520,
+      "intentional_missing_columns": []
+    },
+    {
+      "file": "module1_scope_summary.csv",
+      "rows": 144,
+      "intentional_missing_columns": []
+    },
+    {
+      "file": "module1_solver_disentanglement_12cond.csv",
+      "rows": 576,
+      "intentional_missing_columns": [
+        "cpsc2018_matched8_ap"
+      ]
+    }
+  ],
+  "artifacts": {
+    "results/v1.5.2_micro/calib_weighted_unit_test.json": {
+      "bytes": 7094,
+      "sha256": "c57845826b83f691591d54ff921bf9c517aa67cca3ecb6b707ddbd977b45f745"
+    },
+    "results/v1.5.2_micro/ecgfounder_interface_forensics.json": {
+      "bytes": 49073,
+      "sha256": "91f86dc9cbfcd1487fae7df4fc3b43251f5c77ffe961ea98a0211650aad75db8"
+    },
+    "results/v1.5.2_micro/figure5_bspc_v152.pdf": {
+      "bytes": 25433,
+      "sha256": "32114a26d03700e34d6bb264685ef3cf9a1233b701748ebe59915bd62b902479"
+    },
+    "results/v1.5.2_micro/figure5_bspc_v152.png": {
+      "bytes": 581393,
+      "sha256": "0ec4c76b9fbe14db346ea3c81d927c95860f3e0397e49e89fc68fc2ea62a4120"
+    },
+    "results/v1.5.2_micro/figure5_caption.txt": {
+      "bytes": 1325,
+      "sha256": "0a96c18fba09739df2d0a26cf0a14b6a515300251a1c94d23ff542f6ce798619"
+    },
+    "results/v1.5.2_micro/figure5_include.tex": {
+      "bytes": 1462,
+      "sha256": "1e5dc212edbf404058ca65c21236b172868fdbb455f95fefd7869caa03db2d09"
+    },
+    "results/v1.5.2_micro/figure5_layout_check.json": {
+      "bytes": 214,
+      "sha256": "45db6c9e35cc74fba042a9f8547a47c7f6e1e760ed0e227feae6b2937300d558"
+    },
+    "results/v1.5.2_micro/figure_review_status.json": {
+      "bytes": 902,
+      "sha256": "3aaf69dbceec92cc008b476f728c67937596caeaa1e47c3ac5e05af935ed5342"
+    },
+    "results/v1.5.2_micro/final_review_revision.json": {
+      "bytes": 1346,
+      "sha256": "880018fe1b584320833466afe81960c6c01617f523bf5472b3e66e0e740c4bb5"
+    },
+    "results/v1.5.2_micro/gate_v152_check.json": {
+      "bytes": 22247,
+      "sha256": "66ed16b5c58467e084dd04278dba7f024ae89b1f5935f9957d4503fa39d174b6"
+    },
+    "results/v1.5.2_micro/historical_readonly_check.json": {
+      "bytes": 68,
+      "sha256": "d016a24bf3bd37b7c06d6c9eaa2566007cf5e49abae315d896839f2bd47546c2"
+    },
+    "results/v1.5.2_micro/module12_selection.lock.json": {
+      "bytes": 1923,
+      "sha256": "0df119d9875f91a5ec3847325239002dfac92f68d53e07af93be5e72db640375"
+    },
+    "results/v1.5.2_micro/module1_episode_metrics.csv": {
+      "bytes": 2553057,
+      "sha256": "2f5f9c9bc460794444ac7e9b3da2bbd19e1bfccc98d8ef78a35db79573c7b144"
+    },
+    "results/v1.5.2_micro/module1_paired_stats_holm.csv": {
+      "bytes": 615481,
+      "sha256": "9df8deb765ab70481afc5e1b2240b121567bc0c23382ef6b1fb66564d82f586b"
+    },
+    "results/v1.5.2_micro/module1_scope_summary.csv": {
+      "bytes": 30680,
+      "sha256": "4680ceaa35423f265af609d156bf6c9cc5f5940764955f0699e27e85913edb63"
+    },
+    "results/v1.5.2_micro/module1_solver_disentanglement_12cond.csv": {
+      "bytes": 239585,
+      "sha256": "e0d0c559acfdc27b13afdc306916e0349eaf07d97c455909635582578934ef1d"
+    },
+    "results/v1.5.2_micro/module1_temperature.lock.json": {
+      "bytes": 4009,
+      "sha256": "ccb4b75c1380bf416831d5ec404e9c129f70d48ff27f283240dd6705f847dd0d"
+    },
+    "results/v1.5.2_micro/module2_dev_plateau_summary.json": {
+      "bytes": 6943,
+      "sha256": "bee38858fb6ad2b4d9a42f0d1991d1548f06b20237c83162b3065dff1e5d6a6c"
+    },
+    "results/v1.5.2_micro/module2_expanded_dev_grid.csv": {
+      "bytes": 32063,
+      "sha256": "8d6ebd24efebc3e8bac303481edb6e1d24ac6c71d695a4d396e58daabf953ac9"
+    },
+    "results/v1.5.2_micro/module2_roleswap_episode_metrics.csv": {
+      "bytes": 402679,
+      "sha256": "e11e5fd505db9fb50c363c983e50df8e8a0f00084316e054b58290359e637e77"
+    },
+    "results/v1.5.2_micro/module2_roleswap_expanded_check.csv": {
+      "bytes": 25725,
+      "sha256": "c1630db23db7b7002e101e0ae80d8bf17f11f5acaadd6eb86c040f59bcbea955"
+    },
+    "results/v1.5.2_micro/module3_calib_query_cluster_ci_12cond.csv": {
+      "bytes": 57630,
+      "sha256": "7f0bb36607fb55ce594cb9b8428aba48c0b57888fadf04df512748d946ab019a"
+    },
+    "results/v1.5.2_micro/module3_calib_query_cluster_ci_scope.csv": {
+      "bytes": 15511,
+      "sha256": "7c115d02cfb2bf276a3a16ab3fffb8ca9bf95e034af4c8fdf10b3e7693d0b8cd"
+    },
+    "results/v1.5.2_micro/module3_classwise_calibration_44endpoints.csv": {
+      "bytes": 345431,
+      "sha256": "ced09c42f69dece67b96f69bdace1134095ca0a174a127bc3a369fbe18a4a594"
+    },
+    "results/v1.5.2_micro/module3_crosscohort_permutations.json": {
+      "bytes": 68826,
+      "sha256": "427e7e87fcda9839165d7a0abf8abebd3a6af947b96b9ac3a9044d2d25e84267"
+    },
+    "results/v1.5.2_micro/module3_pathology_dca_episodes.csv": {
+      "bytes": 11223346,
+      "sha256": "9aebb06b86a999c2780c9a33d2e0c994128c828231f90f11ab673951f2b411c4"
+    },
+    "results/v1.5.2_micro/module3_pathology_dca_meta.json": {
+      "bytes": 7193,
+      "sha256": "739e6ccc0633742c9f2f38b47fa2ce57ebe7dde64190529836d222b22de28227"
+    },
+    "results/v1.5.2_micro/module3_pathology_dca_summary.csv": {
+      "bytes": 372373,
+      "sha256": "10ade044c89346a27cc70d67ba727229f9066ee94c779c9a7d9385cafa50b527"
+    },
+    "results/v1.5.2_micro/module3_pathology_dca_wins.csv": {
+      "bytes": 2156,
+      "sha256": "751c7039be81187b1f24185b73f8b2d0e112cc885bb5e73454fd92d5e1656b36"
+    },
+    "results/v1.5.2_micro/module3_reliability_bins_ecgf_merl.csv": {
+      "bytes": 25116,
+      "sha256": "78cae668f0672c1887f042b80d9566c0670444183f6c4e5aa0c0ac9ab7c3e22a"
+    },
+    "results/v1.5.2_micro/module3_selected_endpoints_dca.csv": {
+      "bytes": 408765,
+      "sha256": "815e836cc1c12bd5e3905eefc93ab68f3781960b4b3281d256bde119481cb6bc"
+    },
+    "results/v1.5.2_micro/protocol_interpretation_notes.json": {
+      "bytes": 447,
+      "sha256": "84196cca163ecd31676a70e630da6f5fcb70f631d6fc4a16d1655374706cd524"
+    }
+  },
+  "forensics_missing_items": [
+    "A probability export proven to match every current core h cache was not located; reported historical branch errors are labeled separately.",
+    "SPH paired historical probability cache was not located in the scoped feature-cache directory.",
+    "Per-window hidden/logit arrays were not re-extracted; no causal decomposition beyond the available cache/code evidence is claimed."
+  ],
+  "interpretation_notes": {
+    "STE_fallback": "Numeric specification is followed: PureProx unmatched STE uses alpha=0.1. This name is not a claim that it equals the archived LP alpha=100/10.",
+    "controlled_STE": "Each arm uses its own alpha+lambda at zero anchor, not an assertion that this number is equal across configurations.",
+    "constant_columns": "The exact historical anchored/prior-bias convention is preserved and solver diagnostics enumerate any such column."
+  },
+  "figure_review": {
+    "standalone_figure_passed": true,
+    "primary_render_inspection": "passed: no clipping, overlap or obscured legends; bar baselines zero; TaskRes included",
+    "independent_reviewer": "gpt-6-astra xhigh fresh figure-review agent",
+    "independent_result": "PASS qualified standalone figure; revised aggregation counts resolve the substantive issue; user-requested panel titles accepted as deliberate style waiver",
+    "scope_limit": "This is a figure/caption review, not an independent audit of experimental numerical data. Actual manuscript print-size legibility remains to be checked after integration.",
+    "figure_png_sha256": "0ec4c76b9fbe14db346ea3c81d927c95860f3e0397e49e89fc68fc2ea62a4120",
+    "figure_pdf_sha256": "32114a26d03700e34d6bb264685ef3cf9a1233b701748ebe59915bd62b902479",
+    "vector_PDF_images": 0,
+    "caption_sha256": "0a96c18fba09739df2d0a26cf0a14b6a515300251a1c94d23ff542f6ce798619"
+  },
+  "completed_at_unix": 1795411801.9762993
+}

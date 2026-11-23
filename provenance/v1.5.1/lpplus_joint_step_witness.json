@@ -1,0 +1,40 @@
+{
+  "test": "simultaneous blockwise Lipschitz steps are not a joint descent guarantee",
+  "n": 2,
+  "Z": [
+    [
+      1.0
+    ],
+    [
+      1.0
+    ]
+  ],
+  "source_logit": [
+    1.0,
+    1.0
+  ],
+  "y": [
+    0.0,
+    1.0
+  ],
+  "initial_logits": [
+    1.0,
+    1.0
+  ],
+  "per_block_L": 0.25,
+  "per_block_step": 4.0,
+  "before_BCE": 0.8132616875182228,
+  "after_BCE": 1.0432468472202414,
+  "new_logits": [
+    -1.7727029435600588,
+    -1.7727029435600588
+  ],
+  "loss_increased": true,
+  "joint_feature": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "joint_L": 0.75,
+  "joint_safe_step": 1.3333333333333333
+}

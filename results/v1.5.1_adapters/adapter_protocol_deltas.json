@@ -1,0 +1,79 @@
+{
+  "methods": {
+    "Tip-Adapter-ECG/BCE": {
+      "multilabel_BCE": true,
+      "frozen_waveform_features": true,
+      "text_encoder_used": false,
+      "prior": "PTBXL ten-head mean coordinate-converted source prior",
+      "changes_from_original": [
+        "CLIP image/text interface replaced with frozen ECG and supervised source-head interface",
+        "multiclass objective/readout replaced by independently specified multilabel ECG/BCE extension"
+      ]
+    },
+    "Tip-Adapter-F-ECG/BCE": {
+      "multilabel_BCE": true,
+      "frozen_waveform_features": true,
+      "text_encoder_used": false,
+      "prior": "PTBXL ten-head mean coordinate-converted source prior",
+      "changes_from_original": [
+        "CLIP image/text interface replaced with frozen ECG and supervised source-head interface",
+        "multiclass objective/readout replaced by independently specified multilabel ECG/BCE extension"
+      ]
+    },
+    "TaskRes-ECG/BCE": {
+      "multilabel_BCE": true,
+      "frozen_waveform_features": true,
+      "text_encoder_used": false,
+      "prior": "PTBXL ten-head mean coordinate-converted source prior",
+      "changes_from_original": [
+        "CLIP image/text interface replaced with frozen ECG and supervised source-head interface",
+        "multiclass objective/readout replaced by independently specified multilabel ECG/BCE extension"
+      ]
+    },
+    "LP++-ECG/BCE": {
+      "multilabel_BCE": true,
+      "frozen_waveform_features": true,
+      "text_encoder_used": false,
+      "prior": "PTBXL ten-head mean coordinate-converted source prior",
+      "changes_from_original": [
+        "CLIP image/text interface replaced with frozen ECG and supervised source-head interface",
+        "multiclass objective/readout replaced by independently specified multilabel ECG/BCE extension"
+      ]
+    }
+  },
+  "individual": {
+    "Tip-Adapter-ECG/BCE": {
+      "normalized_cache": true,
+      "encodings": [
+        "signed",
+        "positive"
+      ],
+      "STE": "LP plus cache",
+      "configs": 144
+    },
+    "Tip-Adapter-F-ECG/BCE": {
+      "trainable_cache_keys": true,
+      "trainable_bias": true,
+      "bias_weight_decay": 0.0,
+      "configs": 24,
+      "STE": "LP plus trained cache"
+    },
+    "TaskRes-ECG/BCE": {
+      "optimizer": "torch.optim.Adam",
+      "weight_decay": 0.0,
+      "explicit_residual_L2": true,
+      "configs": 135,
+      "STE": "zero slope plus Jeffreys bias and learned residual"
+    },
+    "LP++-ECG/BCE": {
+      "joint_augmented_Hessian": true,
+      "unconstrained_mixing": true,
+      "configs": 160,
+      "STE": "alpha fixed zero; no source column"
+    }
+  },
+  "spec_sha256": "1ae90e1b4a9d50d015ea787569e053e47b4a4491ff492ff39364f5eff0766e59",
+  "original_method_fidelity_claim": false,
+  "hyperparameter_tie_rule": "exact mean development AP descending, canonical config JSON ascending",
+  "prior_external_exposure": true
+}

@@ -1,0 +1,23 @@
+{
+  "old_sha256": "4e543fa9140862d7a3c3d21ae560132a4de20b1eb1ba85aff3a413e3eb12cf08",
+  "new_sha256": "47bca5e5d73537fe2749ea1f36f876485b4ddc851ae797ce1172276f516c6d49",
+  "reason": "Contiguous memory layout plus exact local inspection of sklearn-retained ROC cutoff points; no numerical protocol change",
+  "synthetic_equivalence": {
+    "old_seconds": 3.5092943260096945,
+    "new_seconds": 1.2523762799974065,
+    "max_abs_difference": 0.0,
+    "synthetic_only": true,
+    "draws": 3000
+  },
+  "real_and_synthetic_witness": {
+    "all_passed": true,
+    "synthetic_and_real_checks": 738,
+    "max_sklearn_error": 3.219646771412954e-15,
+    "drop_intermediate_exact": true,
+    "zero_weight_groups_removed": true,
+    "ap_only_identical": true
+  },
+  "query_draws_unchanged": 2000,
+  "subgroup_draws_unchanged": 500,
+  "fit_code_unchanged": true
+}

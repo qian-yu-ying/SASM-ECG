@@ -1,0 +1,296 @@
+{
+  "passed": true,
+  "max_abs_diff": 2.0539125955565396e-15,
+  "source_sha256": "07cc27985e509739e63c849d4fadfbe215d76e29ab1e5219375e60eee32ab415",
+  "w_equals_one": true,
+  "checks": [
+    {
+      "backbone": "ECGFounder",
+      "cohort": "ningbo",
+      "method": "MeanAnchor",
+      "max_abs_diff": 2.0816681711721685e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "ningbo",
+      "method": "SASM-Ens",
+      "max_abs_diff": 1.1102230246251565e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "ningbo",
+      "method": "Direct-LP",
+      "max_abs_diff": 2.42861286636753e-17
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "ningbo",
+      "method": "LP",
+      "max_abs_diff": 2.0816681711721685e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "ningbo",
+      "method": "Direct-LP-Refit-b",
+      "max_abs_diff": 3.3306690738754696e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "ningbo",
+      "method": "TaskRes-ECG/BCE",
+      "max_abs_diff": 1.249000902703301e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "ningbo",
+      "method": "LP++-ECG/BCE",
+      "max_abs_diff": 1.1102230246251565e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "ningbo",
+      "method": "Tip-Adapter-F-ECG/BCE",
+      "max_abs_diff": 5.551115123125783e-17
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "cpsc2018",
+      "method": "MeanAnchor",
+      "max_abs_diff": 4.85722573273506e-17
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "cpsc2018",
+      "method": "SASM-Ens",
+      "max_abs_diff": 8.326672684688674e-17
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "cpsc2018",
+      "method": "Direct-LP",
+      "max_abs_diff": 3.0531133177191805e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "cpsc2018",
+      "method": "LP",
+      "max_abs_diff": 6.106226635438361e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "cpsc2018",
+      "method": "Direct-LP-Refit-b",
+      "max_abs_diff": 2.498001805406602e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "cpsc2018",
+      "method": "TaskRes-ECG/BCE",
+      "max_abs_diff": 3.608224830031759e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "cpsc2018",
+      "method": "LP++-ECG/BCE",
+      "max_abs_diff": 8.326672684688674e-17
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "cpsc2018",
+      "method": "Tip-Adapter-F-ECG/BCE",
+      "max_abs_diff": 4.440892098500626e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "sph",
+      "method": "MeanAnchor",
+      "max_abs_diff": 1.5265566588595902e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "sph",
+      "method": "SASM-Ens",
+      "max_abs_diff": 6.938893903907228e-17
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "sph",
+      "method": "Direct-LP",
+      "max_abs_diff": 3.191891195797325e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "sph",
+      "method": "LP",
+      "max_abs_diff": 6.938893903907228e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "sph",
+      "method": "Direct-LP-Refit-b",
+      "max_abs_diff": 3.3306690738754696e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "sph",
+      "method": "TaskRes-ECG/BCE",
+      "max_abs_diff": 4.163336342344337e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "sph",
+      "method": "LP++-ECG/BCE",
+      "max_abs_diff": 2.1163626406917047e-16
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "sph",
+      "method": "Tip-Adapter-F-ECG/BCE",
+      "max_abs_diff": 2.0539125955565396e-15
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "ningbo",
+      "method": "MeanAnchor",
+      "max_abs_diff": 1.1102230246251565e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "ningbo",
+      "method": "SASM-Ens",
+      "max_abs_diff": 1.1102230246251565e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "ningbo",
+      "method": "Direct-LP",
+      "max_abs_diff": 1.249000902703301e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "ningbo",
+      "method": "LP",
+      "max_abs_diff": 1.3877787807814457e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "ningbo",
+      "method": "Direct-LP-Refit-b",
+      "max_abs_diff": 3.885780586188048e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "ningbo",
+      "method": "TaskRes-ECG/BCE",
+      "max_abs_diff": 2.7755575615628914e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "ningbo",
+      "method": "LP++-ECG/BCE",
+      "max_abs_diff": 1.6653345369377348e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "ningbo",
+      "method": "Tip-Adapter-F-ECG/BCE",
+      "max_abs_diff": 1.0408340855860843e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "cpsc2018",
+      "method": "MeanAnchor",
+      "max_abs_diff": 5.551115123125783e-17
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "cpsc2018",
+      "method": "SASM-Ens",
+      "max_abs_diff": 2.914335439641036e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "cpsc2018",
+      "method": "Direct-LP",
+      "max_abs_diff": 3.3306690738754696e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "cpsc2018",
+      "method": "LP",
+      "max_abs_diff": 1.249000902703301e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "cpsc2018",
+      "method": "Direct-LP-Refit-b",
+      "max_abs_diff": 2.7755575615628914e-17
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "cpsc2018",
+      "method": "TaskRes-ECG/BCE",
+      "max_abs_diff": 5.551115123125783e-17
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "cpsc2018",
+      "method": "LP++-ECG/BCE",
+      "max_abs_diff": 2.220446049250313e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "cpsc2018",
+      "method": "Tip-Adapter-F-ECG/BCE",
+      "max_abs_diff": 7.771561172376096e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "sph",
+      "method": "MeanAnchor",
+      "max_abs_diff": 2.498001805406602e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "sph",
+      "method": "SASM-Ens",
+      "max_abs_diff": 4.440892098500626e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "sph",
+      "method": "Direct-LP",
+      "max_abs_diff": 6.106226635438361e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "sph",
+      "method": "LP",
+      "max_abs_diff": 7.771561172376096e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "sph",
+      "method": "Direct-LP-Refit-b",
+      "max_abs_diff": 2.220446049250313e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "sph",
+      "method": "TaskRes-ECG/BCE",
+      "max_abs_diff": 3.3306690738754696e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "sph",
+      "method": "LP++-ECG/BCE",
+      "max_abs_diff": 2.7755575615628914e-16
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "sph",
+      "method": "Tip-Adapter-F-ECG/BCE",
+      "max_abs_diff": 1.6653345369377348e-15
+    }
+  ]
+}

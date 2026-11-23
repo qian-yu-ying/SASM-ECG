@@ -1,4 +1,8 @@
-# Reproduction scope — v1.4.1
+# Reproduction scope — v1.5.2
+
+The inherited benchmark scope below is preserved from v1.4.1. For the added
+v1.5.1/v1.5.2 archive and portable summary commands, see
+[V1_5_REPRODUCTION.md](V1_5_REPRODUCTION.md).
 
 | Asset or operation | Status |
 |---|---|

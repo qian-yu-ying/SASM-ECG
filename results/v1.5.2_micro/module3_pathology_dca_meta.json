@@ -1,0 +1,327 @@
+{
+  "cohorts": {
+    "ningbo": {
+      "label_names": [
+        "INRIGHT BUNDLE BRANCH BLOCK",
+        "LEFT ANTERIOR FASCICULAR BLOCK",
+        "LEFT BUNDLE BRANCH BLOCK",
+        "LEFT VENTRICULAR HYPERTROPHY",
+        "NONSPECIFIC INTRAVENTRICULAR BLOCK",
+        "QT HAS LENGTHENED",
+        "RIGHT BUNDLE BRANCH BLOCK",
+        "RIGHT VENTRICULAR HYPERTROPHY",
+        "WITH 1ST DEGREE AV BLOCK",
+        "PREMATURE VENTRICULAR COMPLEXES",
+        "atrial premature complex",
+        "inverted T-waves",
+        "low QRS voltages in the frontal and horizontal leads",
+        "non-specific ST depression",
+        "non-specific T-wave changes",
+        "prolonged PR interval",
+        "ATRIAL FLUTTER",
+        "ELECTRONIC ATRIAL PACEMAKER",
+        "SINUS ARRHYTHMIA",
+        "SINUS BRADYCARDIA",
+        "SINUS RHYTHM",
+        "SINUS TACHYCARDIA"
+      ],
+      "normal_indices": [],
+      "sinus_rhythm_indices": [
+        20
+      ],
+      "subsets": {
+        "All_44": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "Pathology_Excl_Normal": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "Pathology_Excl_Normal_And_SR": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          21
+        ]
+      },
+      "selected_endpoints": [
+        {
+          "index": 2,
+          "label_name": "LEFT BUNDLE BRANCH BLOCK",
+          "clinical_family": "LBBB/CLBBB"
+        },
+        {
+          "index": 6,
+          "label_name": "RIGHT BUNDLE BRANCH BLOCK",
+          "clinical_family": "RBBB/CRBBB"
+        },
+        {
+          "index": 8,
+          "label_name": "WITH 1ST DEGREE AV BLOCK",
+          "clinical_family": "1AVB/I-AVB"
+        },
+        {
+          "index": 9,
+          "label_name": "PREMATURE VENTRICULAR COMPLEXES",
+          "clinical_family": "PVC"
+        },
+        {
+          "index": 10,
+          "label_name": "atrial premature complex",
+          "clinical_family": "PAC"
+        },
+        {
+          "index": 16,
+          "label_name": "ATRIAL FLUTTER",
+          "clinical_family": "AFIB/AFL"
+        }
+      ],
+      "normal_endpoint_present": false,
+      "note": "Ningbo selected 22 endpoints may contain SR without a separate Normal endpoint; no artificial label is introduced. Incomplete RBBB is not relabeled complete RBBB."
+    },
+    "cpsc2018": {
+      "label_names": [
+        "Normal",
+        "AF",
+        "I-AVB",
+        "LBBB",
+        "RBBB",
+        "PAC",
+        "PVC",
+        "STD",
+        "STE"
+      ],
+      "normal_indices": [
+        0
+      ],
+      "sinus_rhythm_indices": [],
+      "subsets": {
+        "All_44": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "Pathology_Excl_Normal": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "Pathology_Excl_Normal_And_SR": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "selected_endpoints": [
+        {
+          "index": 1,
+          "label_name": "AF",
+          "clinical_family": "AFIB/AFL"
+        },
+        {
+          "index": 2,
+          "label_name": "I-AVB",
+          "clinical_family": "1AVB/I-AVB"
+        },
+        {
+          "index": 3,
+          "label_name": "LBBB",
+          "clinical_family": "LBBB/CLBBB"
+        },
+        {
+          "index": 4,
+          "label_name": "RBBB",
+          "clinical_family": "RBBB/CRBBB"
+        },
+        {
+          "index": 5,
+          "label_name": "PAC",
+          "clinical_family": "PAC"
+        },
+        {
+          "index": 6,
+          "label_name": "PVC",
+          "clinical_family": "PVC"
+        }
+      ],
+      "normal_endpoint_present": true,
+      "note": "Ningbo selected 22 endpoints may contain SR without a separate Normal endpoint; no artificial label is introduced. Incomplete RBBB is not relabeled complete RBBB."
+    },
+    "sph": {
+      "label_names": [
+        "NORMAL ECG",
+        "SINUS TACHYCARDIA",
+        "SINUS BRADYCARDIA",
+        "SINUS ARRHYTHMIA",
+        "atrial premature complex",
+        "ATRIAL FIBRILLATION",
+        "ATRIAL FLUTTER",
+        "PREMATURE VENTRICULAR COMPLEXES",
+        "LEFT ANTERIOR FASCICULAR BLOCK",
+        "LEFT BUNDLE BRANCH BLOCK",
+        "INRIGHT BUNDLE BRANCH BLOCK",
+        "RIGHT BUNDLE BRANCH BLOCK",
+        "LEFT VENTRICULAR HYPERTROPHY"
+      ],
+      "normal_indices": [
+        0
+      ],
+      "sinus_rhythm_indices": [],
+      "subsets": {
+        "All_44": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "Pathology_Excl_Normal": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "Pathology_Excl_Normal_And_SR": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "selected_endpoints": [
+        {
+          "index": 4,
+          "label_name": "atrial premature complex",
+          "clinical_family": "PAC"
+        },
+        {
+          "index": 5,
+          "label_name": "ATRIAL FIBRILLATION",
+          "clinical_family": "AFIB/AFL"
+        },
+        {
+          "index": 6,
+          "label_name": "ATRIAL FLUTTER",
+          "clinical_family": "AFIB/AFL"
+        },
+        {
+          "index": 7,
+          "label_name": "PREMATURE VENTRICULAR COMPLEXES",
+          "clinical_family": "PVC"
+        },
+        {
+          "index": 9,
+          "label_name": "LEFT BUNDLE BRANCH BLOCK",
+          "clinical_family": "LBBB/CLBBB"
+        },
+        {
+          "index": 11,
+          "label_name": "RIGHT BUNDLE BRANCH BLOCK",
+          "clinical_family": "RBBB/CRBBB"
+        }
+      ],
+      "normal_endpoint_present": true,
+      "note": "Ningbo selected 22 endpoints may contain SR without a separate Normal endpoint; no artificial label is introduced. Incomplete RBBB is not relabeled complete RBBB."
+    }
+  },
+  "aggregation": "cohort/class endpoints first; equal 12 conditions at scope level; All_44 indicates coverage, not equal weight of all 44 labels globally",
+  "exploratory": true
+}

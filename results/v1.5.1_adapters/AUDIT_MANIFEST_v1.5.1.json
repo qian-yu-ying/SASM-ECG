@@ -1,0 +1,248 @@
+{
+  "all_passed": true,
+  "spec_sha256": "1ae90e1b4a9d50d015ea787569e053e47b4a4491ff492ff39364f5eff0766e59",
+  "baseline_release": "v1.4.1",
+  "baseline_commit": "ef4502c75aad736ff2ff7c226067723a75590f5e",
+  "fit_code_manifest": {
+    "core.py": "9c32d412875eca7d427940c66957e4fff4684aba026d59a15a69531ba269025d",
+    "adapters.py": "c9bdca4fe1660949bcd25336ffca186f4d3043875a168625290d3823f5126f52",
+    "runner.py": "6d87a3cee36a0275d26e86e79636be4b5d16984d20cc67894fe0980a84cd3af1",
+    "unit_tests.py": "6cea04eb1deda6587a5591649ca7a3de1c496045f3337e196b31259df20f5fce"
+  },
+  "postprocess_code_manifest": {
+    "evaluate.py": "07cc27985e509739e63c849d4fadfbe215d76e29ab1e5219375e60eee32ab415",
+    "bootstrap.py": "47bca5e5d73537fe2749ea1f36f876485b4ddc851ae797ce1172276f516c6d49",
+    "timing.py": "40e65cd3c69c53ad137ad48a627c74177d9a1ce2dab6984ee560dbf667b1527b",
+    "postprocess_tests.py": "67c51f290956f693d88b13cfcb63442dd048d7c8842cb63590e0042b65f3f009",
+    "package_results.py": "f0eba59deee013aa09a46f74a24d679280c2439a0dcd0ac2f40ba598298df00c"
+  },
+  "environment": {
+    "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 23:02:24) [GCC 14.4.0]",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "2.2.3",
+    "sklearn": "1.6.1",
+    "torch": "2.8.0+cu128",
+    "cpu": "Intel(R) Xeon(R) Gold 5418Y",
+    "CUDA_VISIBLE_DEVICES": "",
+    "max_worker_count": 4,
+    "BLAS_threads_per_worker": 1
+  },
+  "verification": [
+    {
+      "file": "main_12cond_summary.csv",
+      "rows": 96,
+      "all_numeric_finite": true
+    },
+    {
+      "file": "translational_calibration_summary.csv",
+      "rows": 288,
+      "all_numeric_finite": true
+    },
+    {
+      "file": "translational_dca_summary.csv",
+      "rows": 960,
+      "all_numeric_finite": true
+    },
+    {
+      "file": "translational_locked_rules_summary.csv",
+      "rows": 384,
+      "all_numeric_finite": true
+    },
+    {
+      "file": "roleswap_sph_12cond_summary.csv",
+      "rows": 96,
+      "all_numeric_finite": true
+    },
+    {
+      "file": "cpu_singlecore_latency.csv",
+      "rows": 96,
+      "all_numeric_finite": true
+    },
+    {
+      "file": "classwise_5shot_ap_44endpoints.csv",
+      "rows": 704,
+      "all_numeric_finite": true
+    }
+  ],
+  "fit_assets": 560,
+  "external_episodes_per_role": 240,
+  "development_episodes_per_role": 40,
+  "independent_agent_validation": "not completed; prior external service returned 403 insufficient balance; all recorded tests were executed by primary agent",
+  "bootstrap": {
+    "provenance": [
+      {
+        "cohort": "ningbo",
+        "subgroup": null,
+        "records": 6878,
+        "groups": 6878,
+        "draws": 2000,
+        "seed": 20261122,
+        "unit": "subject_record_not_verified_patient",
+        "file": "draws/ningbo.npz",
+        "sha256": "065372b945331c48664bd66c5f0ca75b8e29d639b9c4b2feb6963cd0a4f65b77"
+      },
+      {
+        "cohort": "ningbo",
+        "subgroup": "Male",
+        "records": 3894,
+        "groups": 3894,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "normalized_full_waveform_hash_not_patient",
+        "file": "draws/ningbo_Male.npz",
+        "sha256": "0af76409850319de71b73b536e00cd2f311e378a7951aecb8cdafe5e8c77998f"
+      },
+      {
+        "cohort": "ningbo",
+        "subgroup": "Female",
+        "records": 2981,
+        "groups": 2981,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "normalized_full_waveform_hash_not_patient",
+        "file": "draws/ningbo_Female.npz",
+        "sha256": "027f0d32b47038adb4646879ca1a4ed52dfefedb6aef50823640320163645eb3"
+      },
+      {
+        "cohort": "ningbo",
+        "subgroup": "Age_lt60",
+        "records": 3218,
+        "groups": 3218,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "normalized_full_waveform_hash_not_patient",
+        "file": "draws/ningbo_Age_lt60.npz",
+        "sha256": "5e88a00d93b680ede677dc9018d4ee20d021ffb0b618abe2678d0a0c7fe6f408"
+      },
+      {
+        "cohort": "ningbo",
+        "subgroup": "Age_ge60",
+        "records": 3650,
+        "groups": 3650,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "normalized_full_waveform_hash_not_patient",
+        "file": "draws/ningbo_Age_ge60.npz",
+        "sha256": "6d96b2e4a9b697e3fff639bf9447ec962d078d77eab875d30897154d73bf39c5"
+      },
+      {
+        "cohort": "cpsc2018",
+        "subgroup": null,
+        "records": 4122,
+        "groups": 3966,
+        "draws": 2000,
+        "seed": 20261122,
+        "unit": "normalized_full_waveform_hash",
+        "file": "draws/cpsc2018.npz",
+        "sha256": "620d14c1f8c8ed3970d5ae0c9ec484df53ca02a3d11a7169d398908f73e6280f"
+      },
+      {
+        "cohort": "cpsc2018",
+        "subgroup": "Male",
+        "records": 2219,
+        "groups": 2128,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "normalized_full_waveform_hash_not_patient",
+        "file": "draws/cpsc2018_Male.npz",
+        "sha256": "b7c105326ba46856331bd482654a285cd3405957a8c3e6d5bf8c61a9bfbf7cd2"
+      },
+      {
+        "cohort": "cpsc2018",
+        "subgroup": "Female",
+        "records": 1903,
+        "groups": 1838,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "normalized_full_waveform_hash_not_patient",
+        "file": "draws/cpsc2018_Female.npz",
+        "sha256": "951ff3572adacec6d4662cc77d9c902a0de2ced1f8a393d62107fec0eff5bf41"
+      },
+      {
+        "cohort": "cpsc2018",
+        "subgroup": "Age_lt60",
+        "records": 1676,
+        "groups": 1645,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "normalized_full_waveform_hash_not_patient",
+        "file": "draws/cpsc2018_Age_lt60.npz",
+        "sha256": "43c072ab0d0a18c7216a37b4e862b18ece3eb57103b53df5d1a71197aae91e07"
+      },
+      {
+        "cohort": "cpsc2018",
+        "subgroup": "Age_ge60",
+        "records": 2439,
+        "groups": 2314,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "normalized_full_waveform_hash_not_patient",
+        "file": "draws/cpsc2018_Age_ge60.npz",
+        "sha256": "f054d5acf75f2afc511f87e196a5dc3112de472ad35af75efaa98594e47c3452"
+      },
+      {
+        "cohort": "sph",
+        "subgroup": null,
+        "records": 15473,
+        "groups": 14800,
+        "draws": 2000,
+        "seed": 20261122,
+        "unit": "patient_id",
+        "file": "draws/sph.npz",
+        "sha256": "e9d3062b5d42b558721b2ce72ad4c45123abfd79c0d70ec7e93aa10fd917eb6c"
+      },
+      {
+        "cohort": "sph",
+        "subgroup": "Male",
+        "records": 8558,
+        "groups": 8174,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "patient_id",
+        "file": "draws/sph_Male.npz",
+        "sha256": "d8e5fb45fed42fd3afbc122f14571e5cc9e178bea589b8c8cdcfb9f480d71a23"
+      },
+      {
+        "cohort": "sph",
+        "subgroup": "Female",
+        "records": 6915,
+        "groups": 6626,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "patient_id",
+        "file": "draws/sph_Female.npz",
+        "sha256": "2364d182137b4b9d2cf9335567801ee1cf0bfdb96f8d6573fb46ee2ef9b857d3"
+      },
+      {
+        "cohort": "sph",
+        "subgroup": "Age_lt60",
+        "records": 10984,
+        "groups": 10586,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "patient_id",
+        "file": "draws/sph_Age_lt60.npz",
+        "sha256": "2c5ee5261dbafe8db74e4c78fdc4faba741c8ee59c0bcca0bef5895ad142d7b4"
+      },
+      {
+        "cohort": "sph",
+        "subgroup": "Age_ge60",
+        "records": 4489,
+        "groups": 4220,
+        "draws": 500,
+        "seed": 20261122,
+        "unit": "patient_id",
+        "file": "draws/sph_Age_ge60.npz",
+        "sha256": "3691391bd99cec6c7387e584dfb29ed51f12227b616fb5fce8e6a2ff6e27ecb8"
+      }
+    ],
+    "new_sampling": true,
+    "reason": "No archived cross-cohort shared index array matching this locked protocol was located; deterministic new draws as specified.",
+    "conditional_on_support_episodes": true,
+    "invalid_draw_policy": "fixed label denominator; remove undefined entire replicate and report count; no imputation"
+  },
+  "metric_units": "fractions; multiply by 100 for percentage points; timing seconds",
+  "replay_boundary": "Metrics and resampling auditable from bundled records/code/draws. Full fit replay needs licensed public raw waveforms/checkpoints or server-resident feature caches and historical dependencies. No end-to-end encoder cost claim.",
+  "completed_at_unix": 1795367953.3487706
+}

@@ -1,0 +1,346 @@
+{
+  "chapman": {
+    "ECGFounder": {
+      "best": {
+        "alpha": 10.0,
+        "lam": 40.0,
+        "mean_dev_ap": 0.5929663339743002
+      },
+      "is_boundary": true,
+      "old_rank": 16,
+      "old_minus_opt_pp": -0.41799126831288946,
+      "old_within_025pp": false,
+      "bands": {
+        "0.1": {
+          "all48": {
+            "count": 2,
+            "alpha_range": [
+              10.0,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              40.0
+            ]
+          },
+          "dual40": {
+            "count": 2,
+            "alpha_range": [
+              10.0,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              40.0
+            ]
+          }
+        },
+        "0.25": {
+          "all48": {
+            "count": 12,
+            "alpha_range": [
+              0.0,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              40.0
+            ]
+          },
+          "dual40": {
+            "count": 10,
+            "alpha_range": [
+              0.001,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              40.0
+            ]
+          }
+        },
+        "0.5": {
+          "all48": {
+            "count": 17,
+            "alpha_range": [
+              0.0,
+              10.0
+            ],
+            "lambda_range": [
+              10.0,
+              40.0
+            ]
+          },
+          "dual40": {
+            "count": 14,
+            "alpha_range": [
+              0.001,
+              10.0
+            ],
+            "lambda_range": [
+              10.0,
+              40.0
+            ]
+          }
+        }
+      }
+    },
+    "MERL": {
+      "best": {
+        "alpha": 1.0,
+        "lam": 40.0,
+        "mean_dev_ap": 0.410698764750461
+      },
+      "is_boundary": false,
+      "old_rank": 22,
+      "old_minus_opt_pp": -0.6962106031980386,
+      "old_within_025pp": false,
+      "bands": {
+        "0.1": {
+          "all48": {
+            "count": 12,
+            "alpha_range": [
+              0.0,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              40.0
+            ]
+          },
+          "dual40": {
+            "count": 10,
+            "alpha_range": [
+              0.001,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              40.0
+            ]
+          }
+        },
+        "0.25": {
+          "all48": {
+            "count": 12,
+            "alpha_range": [
+              0.0,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              40.0
+            ]
+          },
+          "dual40": {
+            "count": 10,
+            "alpha_range": [
+              0.001,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              40.0
+            ]
+          }
+        },
+        "0.5": {
+          "all48": {
+            "count": 12,
+            "alpha_range": [
+              0.0,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              40.0
+            ]
+          },
+          "dual40": {
+            "count": 10,
+            "alpha_range": [
+              0.001,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              40.0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "sph": {
+    "ECGFounder": {
+      "best": {
+        "alpha": 10.0,
+        "lam": 100.0,
+        "mean_dev_ap": 0.7541939265266477
+      },
+      "is_boundary": true,
+      "old_rank": 28,
+      "old_minus_opt_pp": -0.7433721498667167,
+      "old_within_025pp": false,
+      "bands": {
+        "0.1": {
+          "all48": {
+            "count": 11,
+            "alpha_range": [
+              0.0,
+              10.0
+            ],
+            "lambda_range": [
+              40.0,
+              100.0
+            ]
+          },
+          "dual40": {
+            "count": 9,
+            "alpha_range": [
+              0.001,
+              10.0
+            ],
+            "lambda_range": [
+              40.0,
+              100.0
+            ]
+          }
+        },
+        "0.25": {
+          "all48": {
+            "count": 17,
+            "alpha_range": [
+              0.0,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              100.0
+            ]
+          },
+          "dual40": {
+            "count": 14,
+            "alpha_range": [
+              0.001,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              100.0
+            ]
+          }
+        },
+        "0.5": {
+          "all48": {
+            "count": 18,
+            "alpha_range": [
+              0.0,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              100.0
+            ]
+          },
+          "dual40": {
+            "count": 15,
+            "alpha_range": [
+              0.001,
+              10.0
+            ],
+            "lambda_range": [
+              30.0,
+              100.0
+            ]
+          }
+        }
+      }
+    },
+    "MERL": {
+      "best": {
+        "alpha": 1.0,
+        "lam": 100.0,
+        "mean_dev_ap": 0.5599959117827986
+      },
+      "is_boundary": false,
+      "old_rank": 28,
+      "old_minus_opt_pp": -2.7986457072129767,
+      "old_within_025pp": false,
+      "bands": {
+        "0.1": {
+          "all48": {
+            "count": 6,
+            "alpha_range": [
+              0.0,
+              10.0
+            ],
+            "lambda_range": [
+              100.0,
+              100.0
+            ]
+          },
+          "dual40": {
+            "count": 5,
+            "alpha_range": [
+              0.001,
+              10.0
+            ],
+            "lambda_range": [
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "0.25": {
+          "all48": {
+            "count": 12,
+            "alpha_range": [
+              0.0,
+              10.0
+            ],
+            "lambda_range": [
+              100.0,
+              300.0
+            ]
+          },
+          "dual40": {
+            "count": 10,
+            "alpha_range": [
+              0.001,
+              10.0
+            ],
+            "lambda_range": [
+              100.0,
+              300.0
+            ]
+          }
+        },
+        "0.5": {
+          "all48": {
+            "count": 12,
+            "alpha_range": [
+              0.0,
+              10.0
+            ],
+            "lambda_range": [
+              100.0,
+              300.0
+            ]
+          },
+          "dual40": {
+            "count": 10,
+            "alpha_range": [
+              0.001,
+              10.0
+            ],
+            "lambda_range": [
+              100.0,
+              300.0
+            ]
+          }
+        }
+      }
+    }
+  }
+}

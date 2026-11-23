@@ -1,5 +1,12 @@
 # Current release
 
+## v1.5.2 — 2026-11-23
+
+- Archive the completed v1.5.1 ECG/BCE adapter code, development locks, episode metrics, tests, clinical summaries, role-swap and CPU timing exports.
+- Archive v1.5.2 same-solver attribution, expanded development-grid sensitivity, calibration intervals, pathology DCA, interface forensics and figure source data.
+- Add preserved historical runtime sources, bootstrap/grid provenance, payload SHA-256 records, a portable summary replay and explicit reproduction boundaries.
+- Preserve v1.4.1 benchmark data, primary protocol and numerical results unchanged; update package/citation metadata.
+
 ## v1.4.1 — 2026-11-18
 
 - Add complete per-seed Table S18 unmatched CPSC2018 `STE` sensitivity artifacts

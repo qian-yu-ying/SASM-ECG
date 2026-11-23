@@ -1,0 +1,1340 @@
+{
+  "all_read_only": true,
+  "no_encoder_forward": true,
+  "no_GPU": true,
+  "source_commit": "04edac702b61c91face519774ddcc0cd712fef23",
+  "source_evidence": [
+    {
+      "path": "/home/wy/ECGFounder/extract_features_1024.py",
+      "sha256": "41b863a1225b5b7bd0d0dd24e76c1b9205eda74d102435f7cb81a26caa148bec",
+      "source_lines": [
+        {
+          "line": 126,
+          "text": "                pb = torch.sigmoid(logits).cpu().numpy()"
+        }
+      ]
+    },
+    {
+      "path": "/home/wy/ECGFounder/extract_features_filtered.py",
+      "sha256": "7ec3350a65d72fb2d38850a8e5e9c44f955636c086db23fe10e18be0a1fe1848",
+      "source_lines": [
+        {
+          "line": 5,
+          "text": "  - Resample to 500 Hz (window-based, same as timecorrected version)"
+        },
+        {
+          "line": 9,
+          "text": "  - Per-window z-score normalization"
+        },
+        {
+          "line": 70,
+          "text": "def load_and_window_filtered(hea_path: Path) -> tuple[np.ndarray, bool]:"
+        },
+        {
+          "line": 71,
+          "text": "    \"\"\"Load, filter, window a record. Returns (windows, ok).\"\"\""
+        },
+        {
+          "line": 80,
+          "text": "        # Apply paper filter before windowing"
+        },
+        {
+          "line": 88,
+          "text": "            windows = win[np.newaxis, ...]"
+        },
+        {
+          "line": 91,
+          "text": "            windows = [sig[:, i * WIN_SAMPLES:(i + 1) * WIN_SAMPLES]"
+        },
+        {
+          "line": 98,
+          "text": "                windows.append(tail)"
+        },
+        {
+          "line": 99,
+          "text": "            windows = np.stack(windows, axis=0)"
+        },
+        {
+          "line": 101,
+          "text": "        # Per-window z-score"
+        },
+        {
+          "line": 102,
+          "text": "        for w in range(windows.shape[0]):"
+        },
+        {
+          "line": 103,
+          "text": "            m = windows[w].mean()"
+        },
+        {
+          "line": 104,
+          "text": "            s = windows[w].std() + EPS"
+        },
+        {
+          "line": 105,
+          "text": "            windows[w] = (windows[w] - m) / s"
+        },
+        {
+          "line": 107,
+          "text": "        return windows, True"
+        },
+        {
+          "line": 155,
+          "text": "        print(\"[data] Loading, filtering and windowing records …\", flush=True)"
+        },
+        {
+          "line": 157,
+          "text": "            windows, ok = load_and_window_filtered(hea)"
+        },
+        {
+          "line": 159,
+          "text": "            for w in windows:"
+        },
+        {
+          "line": 163,
+          "text": "        print(f\"[data] Total windows: {len(self.items)}\", flush=True)"
+        },
+        {
+          "line": 169,
+          "text": "        rec_idx, window = self.items[idx]"
+        },
+        {
+          "line": 170,
+          "text": "        return torch.from_numpy(window), rec_idx"
+        },
+        {
+          "line": 233,
+          "text": "    feat_sum   = np.zeros((n_records, 1024), dtype=np.float64)"
+        },
+        {
+          "line": 234,
+          "text": "    probs_sum  = np.zeros((n_records, 150),  dtype=np.float64)"
+        },
+        {
+          "line": 235,
+          "text": "    logits_sum = np.zeros((n_records, 150),  dtype=np.float64)"
+        },
+        {
+          "line": 236,
+          "text": "    win_count  = np.zeros(n_records,          dtype=np.int32)"
+        },
+        {
+          "line": 240,
+          "text": "        for windows, rec_idxs in loader:"
+        },
+        {
+          "line": 241,
+          "text": "            windows = windows.to(device)"
+        },
+        {
+          "line": 242,
+          "text": "            logits, feats = model(windows)"
+        },
+        {
+          "line": 244,
+          "text": "            pb = torch.sigmoid(logits).cpu().numpy()"
+        },
+        {
+          "line": 248,
+          "text": "                feat_sum[r]   += fb[i]"
+        },
+        {
+          "line": 249,
+          "text": "                probs_sum[r]  += pb[i]"
+        },
+        {
+          "line": 250,
+          "text": "                logits_sum[r] += lg[i]"
+        },
+        {
+          "line": 251,
+          "text": "                win_count[r]  += 1"
+        },
+        {
+          "line": 254,
+          "text": "                print(f\"  {done}/{len(ds)} windows\", flush=True)"
+        },
+        {
+          "line": 262,
+          "text": "        if win_count[r] > 0:"
+        },
+        {
+          "line": 263,
+          "text": "            feat[r]        = (feat_sum[r]   / win_count[r]).astype(np.float32)"
+        },
+        {
+          "line": 264,
+          "text": "            probs[r]       = (probs_sum[r]  / win_count[r]).astype(np.float32)"
+        },
+        {
+          "line": 265,
+          "text": "            logits_mean[r] = (logits_sum[r] / win_count[r]).astype(np.float32)"
+        },
+        {
+          "line": 275,
+          "text": "        n_windows=win_count.astype(np.int16),"
+        }
+      ]
+    },
+    {
+      "path": "/home/wy/ECGFounder/extract_cpsc2018_features_timecorrected.py",
+      "sha256": "ac48306cc57faadf88bd64b44fd96068b238eaf11c522f4c2dd5753b1bfab031",
+      "source_lines": [
+        {
+          "line": 5,
+          "text": "- Records longer than 10 s are split into non-overlapping 10-s windows at the true 500 Hz"
+        },
+        {
+          "line": 8,
+          "text": "- One record → one feature vector = mean of all its window features."
+        },
+        {
+          "line": 9,
+          "text": "- The record-to-window mapping is saved so support/query splits remain at the record level."
+        },
+        {
+          "line": 10,
+          "text": "- Per-window z-score normalisation (same as the existing script's per-record z-score,"
+        },
+        {
+          "line": 23,
+          "text": "    feat      : (n_records, 1024)  float32   — mean-pooled window features"
+        },
+        {
+          "line": 24,
+          "text": "    probs     : (n_records, 150)   float32   — mean-pooled window probs"
+        },
+        {
+          "line": 27,
+          "text": "    n_windows : (n_records,)       int16      — how many windows were used per record"
+        },
+        {
+          "line": 49,
+          "text": "def load_and_window(hea_path: Path) -> tuple[np.ndarray, bool]:"
+        },
+        {
+          "line": 50,
+          "text": "    \"\"\"Load one record and return its windows as (n_windows, 12, 5000) float32."
+        },
+        {
+          "line": 52,
+          "text": "    Returns (windows, ok).  ok=False means the file could not be read; in that"
+        },
+        {
+          "line": 53,
+          "text": "    case windows is a single all-zero window so the caller always gets an array."
+        },
+        {
+          "line": 67,
+          "text": "        # --- split into non-overlapping 10-s windows ---------------------"
+        },
+        {
+          "line": 72,
+          "text": "            windows = win[np.newaxis, ...]  # (1, 12, 5000)"
+        },
+        {
+          "line": 74,
+          "text": "            # Whole windows first"
+        },
+        {
+          "line": 76,
+          "text": "            windows = [sig[:, i * WIN_SAMPLES:(i + 1) * WIN_SAMPLES]"
+        },
+        {
+          "line": 84,
+          "text": "                windows.append(tail)"
+        },
+        {
+          "line": 85,
+          "text": "            windows = np.stack(windows, axis=0)  # (n_win, 12, 5000)"
+        },
+        {
+          "line": 87,
+          "text": "        # --- per-window z-score normalisation ----------------------------"
+        },
+        {
+          "line": 88,
+          "text": "        for w in range(windows.shape[0]):"
+        },
+        {
+          "line": 89,
+          "text": "            m = windows[w].mean()"
+        },
+        {
+          "line": 90,
+          "text": "            s = windows[w].std() + EPS"
+        },
+        {
+          "line": 91,
+          "text": "            windows[w] = (windows[w] - m) / s"
+        },
+        {
+          "line": 93,
+          "text": "        return windows, True"
+        },
+        {
+          "line": 100,
+          "text": "    \"\"\"Flat dataset of (record_idx, window_idx, window_data)."
+        },
+        {
+          "line": 102,
+          "text": "    Used to batch windows across records for GPU inference."
+        },
+        {
+          "line": 106,
+          "text": "        self.items: list[tuple[int, np.ndarray]] = []  # (rec_idx, window)"
+        },
+        {
+          "line": 109,
+          "text": "        print(\"[data] Loading and windowing records …\", flush=True)"
+        },
+        {
+          "line": 111,
+          "text": "            windows, ok = load_and_window(hea)"
+        },
+        {
+          "line": 113,
+          "text": "            for w in windows:"
+        },
+        {
+          "line": 117,
+          "text": "                print(f\"  windowed {rec_idx + 1}/{len(hea_paths)}\", flush=True)"
+        },
+        {
+          "line": 119,
+          "text": "        print(f\"[data] Total windows: {len(self.items)}\", flush=True)"
+        },
+        {
+          "line": 125,
+          "text": "        rec_idx, window = self.items[idx]"
+        },
+        {
+          "line": 126,
+          "text": "        return torch.from_numpy(window), rec_idx"
+        },
+        {
+          "line": 161,
+          "text": "    # ---- build windowed dataset -------------------------------------------"
+        },
+        {
+          "line": 168,
+          "text": "    # Accumulators: sum of window features/probs/logits per record, and count"
+        },
+        {
+          "line": 169,
+          "text": "    feat_sum   = np.zeros((n_records, 1024), dtype=np.float64)"
+        },
+        {
+          "line": 170,
+          "text": "    probs_sum  = np.zeros((n_records, 150),  dtype=np.float64)"
+        },
+        {
+          "line": 171,
+          "text": "    logits_sum = np.zeros((n_records, 150),  dtype=np.float64)"
+        },
+        {
+          "line": 172,
+          "text": "    win_count  = np.zeros(n_records,         dtype=np.int32)"
+        },
+        {
+          "line": 176,
+          "text": "        for windows, rec_idxs in loader:"
+        },
+        {
+          "line": 177,
+          "text": "            windows  = windows.to(device)"
+        },
+        {
+          "line": 178,
+          "text": "            logits, feats = model(windows)"
+        },
+        {
+          "line": 180,
+          "text": "            pb = torch.sigmoid(logits).cpu().numpy()"
+        },
+        {
+          "line": 185,
+          "text": "                feat_sum[r]   += fb[i]"
+        },
+        {
+          "line": 186,
+          "text": "                probs_sum[r]  += pb[i]"
+        },
+        {
+          "line": 187,
+          "text": "                logits_sum[r] += lg[i]"
+        },
+        {
+          "line": 188,
+          "text": "                win_count[r]  += 1"
+        },
+        {
+          "line": 192,
+          "text": "                print(f\"  {done}/{len(ds)} windows\", flush=True)"
+        },
+        {
+          "line": 194,
+          "text": "    # ---- aggregate: mean over windows -------------------------------------"
+        },
+        {
+          "line": 201,
+          "text": "        if win_count[r] > 0 and valid[r]:"
+        },
+        {
+          "line": 202,
+          "text": "            feat[r]        = (feat_sum[r]   / win_count[r]).astype(np.float32)"
+        },
+        {
+          "line": 203,
+          "text": "            probs[r]       = (probs_sum[r]  / win_count[r]).astype(np.float32)"
+        },
+        {
+          "line": 204,
+          "text": "            logits_mean[r] = (logits_sum[r] / win_count[r]).astype(np.float32)"
+        },
+        {
+          "line": 252,
+          "text": "        n_windows=win_count.astype(np.int16),"
+        },
+        {
+          "line": 256,
+          "text": "    nw = win_count[valid]"
+        },
+        {
+          "line": 257,
+          "text": "    print(f\"  windows/record: min={nw.min()}, median={int(np.median(nw))}, \""
+        }
+      ]
+    },
+    {
+      "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/cpsc9_rerun_20261117/extract_features.py",
+      "sha256": "9fa30c2d7b549f915dfaf6ad22ddfd65131dfa4196362683fb09ae151339ff4c",
+      "source_lines": [
+        {
+          "line": 18,
+          "text": " x=x.T.astype(np.float32);windows=[]"
+        },
+        {
+          "line": 20,
+          "text": "  z=x[:,st:st+5000];z=np.pad(z,((0,0),(0,5000-z.shape[1])));z=(z-z.mean())/(z.std()+1e-6);windows.append(z)"
+        },
+        {
+          "line": 24,
+          "text": " return np.asarray(windows,np.float32),y.astype(np.float32)"
+        },
+        {
+          "line": 36,
+          "text": " total_windows=int(tab.windows.sum());assert __import__('shutil').disk_usage(O).free>45*1024**3"
+        },
+        {
+          "line": 37,
+          "text": " waves=np.lib.format.open_memmap(O/'windows.npy',mode='w+',dtype=np.float32,shape=(total_windows,12,5000));offsets=np.r_[0,np.cumsum(tab.windows.to_numpy(int))];np.save(O/'window_offsets.npy',offsets)"
+        },
+        {
+          "line": 47,
+          "text": "    ef[st+i]=feat[pos:pos+len(w)].mean(0);pos+=len(w)"
+        },
+        {
+          "line": 62,
+          "text": " report=dict(seconds=time.monotonic()-start,records=n,windows=total_windows,physical_gpu=1,raw_reextraction=True,old_record_max_feature_errors=errs,manifest_sha256=sha(O/'manifest.csv'),files={str(p.name):sha(p) for p in [O/'ECGFounder_features.npy',O/'MERL_features.npy',O/'windows.npy',O/'window_of"
+        }
+      ]
+    },
+    {
+      "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/chapman_dev_native_same_20261103/source/locked_ft_runner.py",
+      "sha256": "6298e8aff9bdd0918c616d0fe9157e1df89e411a8ddce483bd28f67e053a8591",
+      "source_lines": [
+        {
+          "line": 178,
+          "text": "def flatten_windows(waves, lengths, indices):"
+        },
+        {
+          "line": 188,
+          "text": "def mean_pool_logits(model, wave_batch, owner_arr, count_arr, batch_size, device):"
+        },
+        {
+          "line": 189,
+          "text": "    \"\"\"Run inference on a pre-flattened window array, mean-pool by record.\"\"\""
+        },
+        {
+          "line": 207,
+          "text": "    arr, own, cnt = flatten_windows(waves, lengths, query_indices)"
+        },
+        {
+          "line": 208,
+          "text": "    logits = mean_pool_logits(model, arr, own, cnt, batch_size, device)"
+        },
+        {
+          "line": 213,
+          "text": "                            window_batch_size=16, record_block_size=32):"
+        },
+        {
+          "line": 214,
+          "text": "    \"\"\"Extract frozen features from the exact window cache used by fine-tuning.\"\"\""
+        },
+        {
+          "line": 219,
+          "text": "        arr, owners, counts = flatten_windows(waves, lengths, block_indices)"
+        },
+        {
+          "line": 224,
+          "text": "            for start in range(0, len(arr), window_batch_size):"
+        },
+        {
+          "line": 225,
+          "text": "                x = torch.from_numpy(arr[start:start + window_batch_size].copy()).to(device)"
+        },
+        {
+          "line": 310,
+          "text": "    prevalence = np.clip(y.mean(0), 1e-8, 1 - 1e-8)"
+        },
+        {
+          "line": 454,
+          "text": "            arr, own, cnt = flatten_windows(waves, lengths, idx_global)"
+        },
+        {
+          "line": 545,
+          "text": "    Returns (n_support, 150) logits averaged over windows."
+        },
+        {
+          "line": 554,
+          "text": "    arr, own, cnt = flatten_windows(waves, lengths, support_indices)"
+        },
+        {
+          "line": 556,
+          "text": "        logits = mean_pool_logits(model_src, arr, own, cnt, batch_size, device)"
+        },
+        {
+          "line": 652,
+          "text": "            val_arr, val_own, val_cnt = flatten_windows(waves, lengths, val_idx)"
+        },
+        {
+          "line": 653,
+          "text": "            val_logits = mean_pool_logits(model, val_arr, val_own, val_cnt,"
+        }
+      ]
+    },
+    {
+      "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/supplement_core_20261118/common.py",
+      "sha256": "79bc12aaeb860fa5567adc8aa650d2395306e87d166d2c9c57de707c4a0bb0f2",
+      "source_lines": []
+    },
+    {
+      "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/chapman_dev_native_same_20261103/source/target_contract.py",
+      "sha256": "5f6f37ce1c5e9c9f4ca39285a9a121807b7f2194c77896f4b4800e6acbecdc7b",
+      "source_lines": [
+        {
+          "line": 99,
+          "text": " w0=np.clip(w0,lower,upper)"
+        },
+        {
+          "line": 100,
+          "text": " my=ya.mean(0);b0=np.log(np.clip(my,1e-8,1-1e-8)/np.clip(1-my,1e-8,1))"
+        }
+      ]
+    }
+  ],
+  "dense_head": {
+    "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/chapman_dev_native_same_20261103/assets/dense.npz",
+    "sha256": "32c58ad5cea236fe14d9bb72e5a79b4c99e44f06793372ce50a6a66bb1ded14c",
+    "P_shape": [
+      150,
+      1024
+    ],
+    "q_shape": [
+      150
+    ]
+  },
+  "cohorts": {
+    "chapman": {
+      "core_manifest": "/home/wy/ECGFounder/supplement_queue_20261101_remote/chapman_dev_native_same_20261103/data/chapman/manifest.csv",
+      "core_manifest_sha256": "863b2306408f97a25fc52201953e3196de2a5925159db15d45ba101a32d302d9",
+      "core_h_cache": "/home/wy/ECGFounder/supplement_queue_20261101_remote/chapman_dev_native_same_20261103/data/chapman/features.npy",
+      "records": 10222,
+      "T1_records": 10222,
+      "Tgt1_records": 0,
+      "Tgt1_fraction": 0.0,
+      "window_median": 1.0,
+      "window_p95": 1.0,
+      "window_max": 1,
+      "T_distribution": {
+        "1": 10222
+      },
+      "paired_core_g_status": "No one-to-one exported probability cache has yet been proven to match these exact core h vectors; candidate historical caches audited separately below."
+    },
+    "ningbo": {
+      "core_manifest": "/home/wy/ECGFounder/supplement_queue_20261101_remote/chapman_dev_native_same_20261103/data/ningbo/manifest.csv",
+      "core_manifest_sha256": "532f525ee18f6d8974996bd66d7a12188a85c86ab510294045f67d3a7cbb339d",
+      "core_h_cache": "/home/wy/ECGFounder/supplement_queue_20261101_remote/chapman_dev_native_same_20261103/data/ningbo/features.npy",
+      "records": 34441,
+      "T1_records": 34441,
+      "Tgt1_records": 0,
+      "Tgt1_fraction": 0.0,
+      "window_median": 1.0,
+      "window_p95": 1.0,
+      "window_max": 1,
+      "T_distribution": {
+        "1": 34441
+      },
+      "paired_core_g_status": "No one-to-one exported probability cache has yet been proven to match these exact core h vectors; candidate historical caches audited separately below."
+    },
+    "cpsc2018": {
+      "core_manifest": "/home/wy/ECGFounder/supplement_queue_20261101_remote/cpsc9_rerun_20261117/manifest.csv",
+      "core_manifest_sha256": "cfc5946e413dd1ea24b77105de91de9134ee719039686463830ac3d4510bc64b",
+      "core_h_cache": "/home/wy/ECGFounder/supplement_queue_20261101_remote/cpsc9_rerun_20261117/ECGFounder_features.npy",
+      "records": 6877,
+      "T1_records": 2426,
+      "Tgt1_records": 4451,
+      "Tgt1_fraction": 0.6472298967573069,
+      "window_median": 2.0,
+      "window_p95": 4.0,
+      "window_max": 15,
+      "T_distribution": {
+        "1": 2426,
+        "2": 3245,
+        "3": 618,
+        "4": 345,
+        "5": 131,
+        "6": 85,
+        "7": 10,
+        "8": 5,
+        "9": 2,
+        "10": 3,
+        "11": 1,
+        "12": 3,
+        "14": 2,
+        "15": 1
+      },
+      "paired_core_g_status": "No one-to-one exported probability cache has yet been proven to match these exact core h vectors; candidate historical caches audited separately below."
+    },
+    "sph": {
+      "core_manifest": "/home/wy/ECGFounder/supplement_queue_20261101_remote/chapman_dev_native_same_20261103/data/sph/manifest.csv",
+      "core_manifest_sha256": "7fc5d0f6c5c9cf3e51e07eceec61473c4e70e62da01d384ac2e5dd14625c2dcf",
+      "core_h_cache": "/home/wy/ECGFounder/supplement_queue_20261101_remote/chapman_dev_native_same_20261103/data/sph/features.npy",
+      "records": 25770,
+      "T1_records": 18842,
+      "Tgt1_records": 6928,
+      "Tgt1_fraction": 0.2688397361272798,
+      "window_median": 1.0,
+      "window_p95": 2.0,
+      "window_max": 6,
+      "T_distribution": {
+        "1": 18842,
+        "2": 6628,
+        "3": 243,
+        "4": 40,
+        "5": 13,
+        "6": 4
+      },
+      "paired_core_g_status": "No one-to-one exported probability cache has yet been proven to match these exact core h vectors; candidate historical caches audited separately below."
+    },
+    "ptbxl_folds1_8": {
+      "database": "/home/wy/ECGFounder/data/PTBXL_v1.0.3/ptbxl_database.csv",
+      "database_sha256": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b",
+      "records": 17418,
+      "T1_records": 17418,
+      "Tgt1_records": 0,
+      "Tgt1_fraction": 0.0,
+      "window_median": 1.0,
+      "window_p95": 1.0,
+      "window_max": 1,
+      "evidence": "PTB-XL filename_hr records are fixed 10-second records; paired-cache n_windows verified separately. This count is folds 1-8 before the source-head label/record filtering."
+    }
+  },
+  "paired_cache_audits": [
+    {
+      "cohort": "ptbxl",
+      "path": "/home/wy/ECGFounder/res/features_1024/ptbxl_feat1024_filtered.npz",
+      "sha256": "fda9efdb010218301f3dd34e16f8c45bd41daff6997b4269bff2c54c3088477a",
+      "available": true,
+      "keys": [
+        "feat",
+        "probs",
+        "logits_mean",
+        "valid",
+        "records",
+        "n_windows",
+        "filter_protocol"
+      ],
+      "records": 17418,
+      "branch": "historical_filtered",
+      "window_count_source": "cache n_windows",
+      "provenance_caveat": "These paired-cache errors are not asserted to describe the current core pipeline unless exact record/feature alignment is established.",
+      "core_h_alignment": {
+        "status": "not_checked_no_core_ptb_h_cache"
+      },
+      "strata": {
+        "T1": {
+          "records": 17418,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 2612700,
+                "signed_median": 7.124627887655777e-09,
+                "median_abs": 5.053167819735194e-07,
+                "p95_abs": 2.126309951666626e-06,
+                "max_abs": 1.4530409193565035,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 4.210204003521262e-06
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 2612700,
+                "signed_median": 7.125112166939118e-09,
+                "median_abs": 5.053167819735194e-07,
+                "p95_abs": 2.126293088400285e-06,
+                "max_abs": 0.08345008358754313,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 0.0
+            }
+          },
+          "unclipped_saturated_fraction": 0.0,
+          "mean_logit_minus_Pmeanh_q": {
+            "count": 2612700,
+            "signed_median": 1.2699310047992185e-08,
+            "median_abs": 4.946754059709235e-07,
+            "p95_abs": 1.963548157313255e-06,
+            "max_abs": 1.0387968053748864e-05,
+            "undefined_reason": null
+          }
+        },
+        "Tgt1": {
+          "records": 0,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 0,
+                "signed_median": null,
+                "median_abs": null,
+                "p95_abs": null,
+                "max_abs": null,
+                "undefined_reason": "no records in this stratum"
+              },
+              "clipped_fraction": null
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 0,
+                "signed_median": null,
+                "median_abs": null,
+                "p95_abs": null,
+                "max_abs": null,
+                "undefined_reason": "no records in this stratum"
+              },
+              "clipped_fraction": null
+            }
+          },
+          "unclipped_saturated_fraction": null,
+          "mean_logit_minus_Pmeanh_q": {
+            "count": 0,
+            "signed_median": null,
+            "median_abs": null,
+            "p95_abs": null,
+            "max_abs": null,
+            "undefined_reason": "no records in this stratum"
+          }
+        }
+      }
+    },
+    {
+      "cohort": "chapman",
+      "path": "/home/wy/ECGFounder/res/features_1024/chapman_feat1024_filtered.npz",
+      "sha256": "4ed340520e2f340dd59771ea2eaf9e6ccc590365746635dd730f409dbbdd488f",
+      "available": true,
+      "keys": [
+        "feat",
+        "probs",
+        "logits_mean",
+        "valid",
+        "records",
+        "n_windows",
+        "filter_protocol"
+      ],
+      "records": 10247,
+      "branch": "historical_filtered",
+      "window_count_source": "cache n_windows",
+      "provenance_caveat": "These paired-cache errors are not asserted to describe the current core pipeline unless exact record/feature alignment is established.",
+      "core_h_alignment": {
+        "status": "record_matched_but_not_exact_core_h",
+        "matched_records": 10222,
+        "core_records": 10222,
+        "max_abs_h_error": 12.391962230205536,
+        "comparison_complete_for_matching_records": true,
+        "interpretation": "Do not infer identical preprocessing or an exact core probability interface from record IDs alone."
+      },
+      "strata": {
+        "T1": {
+          "records": 10247,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 1537050,
+                "signed_median": 4.755386306953824e-09,
+                "median_abs": 4.6230892625231945e-07,
+                "p95_abs": 1.916693299541806e-06,
+                "max_abs": 2.5219789032402087,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 2.602387690706223e-06
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 1537050,
+                "signed_median": 4.75600425708933e-09,
+                "median_abs": 4.6230892625231945e-07,
+                "p95_abs": 1.916693299541806e-06,
+                "max_abs": 0.39510342750578076,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 0.0
+            }
+          },
+          "unclipped_saturated_fraction": 0.0,
+          "mean_logit_minus_Pmeanh_q": {
+            "count": 1537050,
+            "signed_median": 9.885077867366476e-09,
+            "median_abs": 4.5188978958776715e-07,
+            "p95_abs": 1.8036825379041944e-06,
+            "max_abs": 9.667603452001572e-06,
+            "undefined_reason": null
+          }
+        },
+        "Tgt1": {
+          "records": 0,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 0,
+                "signed_median": null,
+                "median_abs": null,
+                "p95_abs": null,
+                "max_abs": null,
+                "undefined_reason": "no records in this stratum"
+              },
+              "clipped_fraction": null
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 0,
+                "signed_median": null,
+                "median_abs": null,
+                "p95_abs": null,
+                "max_abs": null,
+                "undefined_reason": "no records in this stratum"
+              },
+              "clipped_fraction": null
+            }
+          },
+          "unclipped_saturated_fraction": null,
+          "mean_logit_minus_Pmeanh_q": {
+            "count": 0,
+            "signed_median": null,
+            "median_abs": null,
+            "p95_abs": null,
+            "max_abs": null,
+            "undefined_reason": "no records in this stratum"
+          }
+        }
+      }
+    },
+    {
+      "cohort": "ningbo",
+      "path": "/home/wy/ECGFounder/res/features_1024/ningbo_feat1024_filtered.npz",
+      "sha256": "270014ebf03207167fc35e73753fbac0d00aac0b1b5539fcbaa969e9bb5f4878",
+      "available": true,
+      "keys": [
+        "feat",
+        "probs",
+        "logits_mean",
+        "valid",
+        "records",
+        "n_windows",
+        "filter_protocol"
+      ],
+      "records": 34905,
+      "branch": "historical_filtered",
+      "window_count_source": "cache n_windows",
+      "provenance_caveat": "These paired-cache errors are not asserted to describe the current core pipeline unless exact record/feature alignment is established.",
+      "core_h_alignment": {
+        "status": "record_matched_but_not_exact_core_h",
+        "matched_records": 34441,
+        "core_records": 34441,
+        "max_abs_h_error": 17.673315048217773,
+        "comparison_complete_for_matching_records": true,
+        "interpretation": "Do not infer identical preprocessing or an exact core probability interface from record IDs alone."
+      },
+      "strata": {
+        "T1": {
+          "records": 34905,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 5235750,
+                "signed_median": 5.613463471831892e-09,
+                "median_abs": 4.621812035310313e-07,
+                "p95_abs": 1.9206312015018758e-06,
+                "max_abs": 4.053976357947915,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 1.088669245093826e-05
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 5235750,
+                "signed_median": 5.611662023952135e-09,
+                "median_abs": 4.621800072657223e-07,
+                "p95_abs": 1.9205795759980047e-06,
+                "max_abs": 1.7513903643982616,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 1.9099460440242563e-07
+            }
+          },
+          "unclipped_saturated_fraction": 1.9099460440242563e-07,
+          "mean_logit_minus_Pmeanh_q": {
+            "count": 5235750,
+            "signed_median": 1.1067457617031096e-08,
+            "median_abs": 4.5232499013003746e-07,
+            "p95_abs": 1.8028944849479699e-06,
+            "max_abs": 1.0451728693183782e-05,
+            "undefined_reason": null
+          }
+        },
+        "Tgt1": {
+          "records": 0,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 0,
+                "signed_median": null,
+                "median_abs": null,
+                "p95_abs": null,
+                "max_abs": null,
+                "undefined_reason": "no records in this stratum"
+              },
+              "clipped_fraction": null
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 0,
+                "signed_median": null,
+                "median_abs": null,
+                "p95_abs": null,
+                "max_abs": null,
+                "undefined_reason": "no records in this stratum"
+              },
+              "clipped_fraction": null
+            }
+          },
+          "unclipped_saturated_fraction": null,
+          "mean_logit_minus_Pmeanh_q": {
+            "count": 0,
+            "signed_median": null,
+            "median_abs": null,
+            "p95_abs": null,
+            "max_abs": null,
+            "undefined_reason": "no records in this stratum"
+          }
+        }
+      }
+    },
+    {
+      "cohort": "chapman",
+      "path": "/home/wy/ECGFounder/res/features_1024/chapman_feat1024.npz",
+      "sha256": "20cd96568c00525f31d1429ec8a13551ad716aa5dbf8da466c0e6a72614ce8b1",
+      "available": true,
+      "keys": [
+        "feat",
+        "probs",
+        "valid",
+        "records"
+      ],
+      "records": 10247,
+      "branch": "historical_singlepass_unfiltered",
+      "window_count_source": "single-pass extractor code; current Chapman/Ningbo manifests independently have T=1 for every record",
+      "provenance_caveat": "These paired-cache errors are not asserted to describe the current core pipeline unless exact record/feature alignment is established.",
+      "core_h_alignment": {
+        "status": "record_matched_but_not_exact_core_h",
+        "matched_records": 10222,
+        "core_records": 10222,
+        "max_abs_h_error": 0.011065006256103516,
+        "comparison_complete_for_matching_records": true,
+        "interpretation": "Do not infer identical preprocessing or an exact core probability interface from record IDs alone."
+      },
+      "strata": {
+        "T1": {
+          "records": 10247,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 1537050,
+                "signed_median": 2.481851613111985e-09,
+                "median_abs": 5.510396219321478e-07,
+                "p95_abs": 2.270293911799115e-06,
+                "max_abs": 2.095040614221279,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 7.156566149442113e-06
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 1537050,
+                "signed_median": 2.479470850857979e-09,
+                "median_abs": 5.510383114248896e-07,
+                "p95_abs": 2.2702671281127353e-06,
+                "max_abs": 0.09587502022833583,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 0.0
+            }
+          },
+          "unclipped_saturated_fraction": 0.0
+        },
+        "Tgt1": {
+          "records": 0,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 0,
+                "signed_median": null,
+                "median_abs": null,
+                "p95_abs": null,
+                "max_abs": null,
+                "undefined_reason": "no records in this stratum"
+              },
+              "clipped_fraction": null
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 0,
+                "signed_median": null,
+                "median_abs": null,
+                "p95_abs": null,
+                "max_abs": null,
+                "undefined_reason": "no records in this stratum"
+              },
+              "clipped_fraction": null
+            }
+          },
+          "unclipped_saturated_fraction": null
+        }
+      }
+    },
+    {
+      "cohort": "ningbo",
+      "path": "/home/wy/ECGFounder/res/features_1024/ningbo_feat1024.npz",
+      "sha256": "8254b5debac460358f9c4f775610729143b26591e58e30e07e5edbbb98135356",
+      "available": true,
+      "keys": [
+        "feat",
+        "probs",
+        "valid",
+        "records"
+      ],
+      "records": 34905,
+      "branch": "historical_singlepass_unfiltered",
+      "window_count_source": "single-pass extractor code; current Chapman/Ningbo manifests independently have T=1 for every record",
+      "provenance_caveat": "These paired-cache errors are not asserted to describe the current core pipeline unless exact record/feature alignment is established.",
+      "core_h_alignment": {
+        "status": "record_matched_but_not_exact_core_h",
+        "matched_records": 34441,
+        "core_records": 34441,
+        "max_abs_h_error": 0.009196102619171143,
+        "comparison_complete_for_matching_records": true,
+        "interpretation": "Do not infer identical preprocessing or an exact core probability interface from record IDs alone."
+      },
+      "strata": {
+        "T1": {
+          "records": 34905,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 5235750,
+                "signed_median": 3.1215696694175676e-09,
+                "median_abs": 5.490597947410691e-07,
+                "p95_abs": 2.270060403386508e-06,
+                "max_abs": 3.1372919215759527,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 2.8649190660363846e-05
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 5235750,
+                "signed_median": 3.0977747034199865e-09,
+                "median_abs": 5.490542940300713e-07,
+                "p95_abs": 2.2698318804970083e-06,
+                "max_abs": 0.8347059285814105,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 7.639784176097025e-07
+            }
+          },
+          "unclipped_saturated_fraction": 0.0
+        },
+        "Tgt1": {
+          "records": 0,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 0,
+                "signed_median": null,
+                "median_abs": null,
+                "p95_abs": null,
+                "max_abs": null,
+                "undefined_reason": "no records in this stratum"
+              },
+              "clipped_fraction": null
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 0,
+                "signed_median": null,
+                "median_abs": null,
+                "p95_abs": null,
+                "max_abs": null,
+                "undefined_reason": "no records in this stratum"
+              },
+              "clipped_fraction": null
+            }
+          },
+          "unclipped_saturated_fraction": null
+        }
+      }
+    },
+    {
+      "cohort": "cpsc2018",
+      "path": "/home/wy/ECGFounder/res/features_1024/cpsc2018_feat1024_timecorrected.npz",
+      "sha256": "a864b096279a8e2976ff251b4ac1ce1d10f904ec378319dd97c45cbcb955ff9a",
+      "available": true,
+      "keys": [
+        "feat",
+        "probs",
+        "logits_mean",
+        "valid",
+        "records",
+        "n_windows"
+      ],
+      "records": 6877,
+      "branch": "historical_timecorrected",
+      "window_count_source": "cache n_windows",
+      "provenance_caveat": "These paired-cache errors are not asserted to describe the current core pipeline unless exact record/feature alignment is established.",
+      "core_h_alignment": {
+        "status": "record_matched_but_not_exact_core_h",
+        "matched_records": 6877,
+        "core_records": 6877,
+        "max_abs_h_error": 0.004017353057861328,
+        "comparison_complete_for_matching_records": true,
+        "interpretation": "Do not infer identical preprocessing or an exact core probability interface from record IDs alone."
+      },
+      "strata": {
+        "T1": {
+          "records": 2426,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 363900,
+                "signed_median": 4.601128367198726e-09,
+                "median_abs": 4.4169336721466834e-07,
+                "p95_abs": 1.8484857369771568e-06,
+                "max_abs": 0.48651189111365234,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 2.7480076944215445e-06
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 363900,
+                "signed_median": 4.598414593548483e-09,
+                "median_abs": 4.4169336721466834e-07,
+                "p95_abs": 1.8484857369771568e-06,
+                "max_abs": 0.027866769919736356,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 0.0
+            }
+          },
+          "unclipped_saturated_fraction": 0.0,
+          "mean_logit_minus_Pmeanh_q": {
+            "count": 363900,
+            "signed_median": 1.0182795051605353e-08,
+            "median_abs": 4.3144363726099755e-07,
+            "p95_abs": 1.7178487122126995e-06,
+            "max_abs": 8.270028530432683e-06,
+            "undefined_reason": null
+          }
+        },
+        "Tgt1": {
+          "records": 4451,
+          "epsilon_sensitivity": {
+            "1e-06": {
+              "delta_tilde_g_minus_linear": {
+                "count": 667650,
+                "signed_median": 0.10426829040221053,
+                "median_abs": 0.11750342994752416,
+                "p95_abs": 1.249520186524781,
+                "max_abs": 6.290165202198405,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 0.0
+            },
+            "1e-07": {
+              "delta_tilde_g_minus_linear": {
+                "count": 667650,
+                "signed_median": 0.10426829040221053,
+                "median_abs": 0.11750342994752416,
+                "p95_abs": 1.249520186524781,
+                "max_abs": 6.290165202198405,
+                "undefined_reason": null
+              },
+              "clipped_fraction": 0.0
+            }
+          },
+          "unclipped_saturated_fraction": 0.0,
+          "mean_logit_minus_Pmeanh_q": {
+            "count": 667650,
+            "signed_median": 9.547384660635316e-09,
+            "median_abs": 2.9198661755103217e-07,
+            "p95_abs": 1.1120214554072284e-06,
+            "max_abs": 5.10731985592372e-06,
+            "undefined_reason": null
+          }
+        }
+      }
+    }
+  ],
+  "aggregation_findings": {
+    "historical_filtered": "Source sums per-window hidden features, sigmoid probabilities and logits separately; each divided by the window count. Thus logit(mean(sigmoid(logit))) need not equal mean(logit).",
+    "new_CPSC_core": "20261117 extraction saves averaged window hidden features; no corresponding 150-class probabilities are written by that script.",
+    "core_h_vs_candidate_g": "Do not silently equate historical filtered probability exports with the current core h caches."
+  },
+  "clipping_provenance": {
+    "status": "not_uniquely_resolved_for_all_core_source_heads",
+    "candidate_source_lines": [
+      {
+        "path": "/home/wy/ECGFounder/cs_sasm_experiment.py",
+        "sha256": "b7bfb394366cdb685679d6ab33aeb310e278adde80fe4ecfd90552517cb0e1fb",
+        "line": 277,
+        "text": "src_logits = np.log(np.clip(probs.astype(np.float64), EPS, 1-EPS) /",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/cs_sasm_experiment.py",
+        "sha256": "b7bfb394366cdb685679d6ab33aeb310e278adde80fe4ecfd90552517cb0e1fb",
+        "line": 278,
+        "text": "np.clip(1-probs.astype(np.float64), EPS, 1))",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/cs_sasm_experiment.py",
+        "sha256": "b7bfb394366cdb685679d6ab33aeb310e278adde80fe4ecfd90552517cb0e1fb",
+        "line": 307,
+        "text": "ptbxl_logits = np.log(np.clip(ptbxl_probs.astype(np.float64), EPS, 1-EPS) /",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/cs_sasm_experiment.py",
+        "sha256": "b7bfb394366cdb685679d6ab33aeb310e278adde80fe4ecfd90552517cb0e1fb",
+        "line": 308,
+        "text": "np.clip(1-ptbxl_probs.astype(np.float64), EPS, 1))",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/corrected_external_validation.py",
+        "sha256": "b8cfe3adc3c1c3985ad2ceca4487de8723fd21922de786f459dfbb86fa0b8d7f",
+        "line": 286,
+        "text": "src_logits = np.log(np.clip(probs.astype(np.float64),EPS,1-EPS)/",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/corrected_external_validation.py",
+        "sha256": "b8cfe3adc3c1c3985ad2ceca4487de8723fd21922de786f459dfbb86fa0b8d7f",
+        "line": 287,
+        "text": "np.clip(1-probs.astype(np.float64),EPS,1))",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/chapman_validation.py",
+        "sha256": "7e8ff225acd91e871ecdae1ea3569138f39ac3565eb0bd554eeaf15e9d9c47d5",
+        "line": 241,
+        "text": "src_logits=np.log(np.clip(probs.astype(np.float64),EPS,1-EPS)/",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/chapman_validation.py",
+        "sha256": "7e8ff225acd91e871ecdae1ea3569138f39ac3565eb0bd554eeaf15e9d9c47d5",
+        "line": 242,
+        "text": "np.clip(1-probs.astype(np.float64),EPS,1))",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/sasm_dev_matrix.py",
+        "sha256": "a678dac00c59bd9c33ac0e857620ecfdfc7ff70453740b5cf670a27603a537a9",
+        "line": 727,
+        "text": "logits = np.log(np.clip(probs.astype(np.float64), C.EPS, 1 - C.EPS) /",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/sasm_dev_matrix.py",
+        "sha256": "a678dac00c59bd9c33ac0e857620ecfdfc7ff70453740b5cf670a27603a537a9",
+        "line": 728,
+        "text": "np.clip(1 - probs.astype(np.float64), C.EPS, 1))",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/ptbxl_matched_b3_extension.py",
+        "sha256": "c8da7c8c162627ff38a02044c855e8dbac31b0e3d593cccae69c8a03ca62124c",
+        "line": 434,
+        "text": "source_logits = np.log(np.clip(source, 1e-6, 1 - 1e-6) /",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/ptbxl_matched_b3_extension.py",
+        "sha256": "c8da7c8c162627ff38a02044c855e8dbac31b0e3d593cccae69c8a03ca62124c",
+        "line": 435,
+        "text": "np.clip(1 - source, 1e-6, 1)).astype(np.float32)",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/ptbxl_matched_b3_extension.py",
+        "sha256": "c8da7c8c162627ff38a02044c855e8dbac31b0e3d593cccae69c8a03ca62124c",
+        "line": 527,
+        "text": "query_x = np.log(np.clip(query_probabilities, 1e-6, 1 - 1e-6) /",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/ptbxl_matched_b3_extension.py",
+        "sha256": "c8da7c8c162627ff38a02044c855e8dbac31b0e3d593cccae69c8a03ca62124c",
+        "line": 528,
+        "text": "np.clip(1 - query_probabilities, 1e-6, 1)).astype(np.float32)",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/ptbxl_shared_episode_benchmark.py",
+        "sha256": "9be917b464a24554d8f8360d37abc119332d7248be20c3698cb0bf69eed72c60",
+        "line": 116,
+        "text": "source_logits = logit(np.clip(source[train_rows], 1e-6, 1 - 1e-6)).astype(np.float32)",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      },
+      {
+        "path": "/home/wy/ECGFounder/ptbxl_shared_episode_benchmark.py",
+        "sha256": "9be917b464a24554d8f8360d37abc119332d7248be20c3698cb0bf69eed72c60",
+        "line": 726,
+        "text": "residual_prob[:, j] = np.clip(base_query + correction, 1e-5, 1 - 1e-5)",
+        "association": "candidate clipping evidence; not proof this function generated every source head"
+      }
+    ],
+    "evaluated_epsilons": [
+      1e-06,
+      1e-07
+    ],
+    "note": "EPS in waveform z-scoring is not evidence for probability-logit clipping. No epsilon is invented as the proven historical value."
+  },
+  "missing_items": [
+    "A probability export proven to match every current core h cache was not located; reported historical branch errors are labeled separately.",
+    "SPH paired historical probability cache was not located in the scoped feature-cache directory.",
+    "Per-window hidden/logit arrays were not re-extracted; no causal decomposition beyond the available cache/code evidence is claimed."
+  ]
+}

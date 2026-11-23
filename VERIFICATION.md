@@ -1,3 +1,9 @@
+# v1.5.2 archive verification
+
+See `validation/V1_5_ARCHIVE_CHECKS.json` for the current extension checks and
+`docs/V1_5_REPRODUCTION.md` for their limits. The existing v1.4.1 verification
+record is retained below as historical evidence.
+
 # Release validation — v1.4.1
 
 All checks were performed locally on CPU using completed cached experiment

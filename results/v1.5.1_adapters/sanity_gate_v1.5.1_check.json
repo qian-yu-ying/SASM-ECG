@@ -1,0 +1,195 @@
+{
+  "all_passed": true,
+  "Layer_A": {
+    "passed": true,
+    "tolerance_pp": 1e-09,
+    "max_abs_diff_pp": 2.220446049250313e-14,
+    "numeric_checks": 49360,
+    "errors": []
+  },
+  "Layer_B": {
+    "passed": true,
+    "rounding": "2 decimals for AP/AUC/ECE; 1 decimal for Rule A",
+    "printed_panel_checks": 104,
+    "global_checks": [
+      {
+        "method": "Direct-LP",
+        "metric": "Raw_ECE",
+        "actual": 4.7020586035386644,
+        "display": 4.7,
+        "decimals": 2
+      },
+      {
+        "method": "Direct-LP",
+        "metric": "DevTemperature_ECE",
+        "actual": 4.517415351790375,
+        "display": 4.52,
+        "decimals": 2
+      },
+      {
+        "method": "Direct-LP",
+        "metric": "AP",
+        "actual": 60.103945360832945,
+        "display": 60.1,
+        "decimals": 2
+      },
+      {
+        "method": "Direct-LP",
+        "metric": "RuleA_specificity",
+        "actual": 96.36972656573852,
+        "display": 96.4,
+        "decimals": 1
+      },
+      {
+        "method": "Direct-LP",
+        "metric": "RuleA_sensitivity",
+        "actual": 59.826287786253005,
+        "display": 59.8,
+        "decimals": 1
+      },
+      {
+        "method": "Direct-LP",
+        "metric": "RuleA_PPV",
+        "actual": 58.5951035160425,
+        "display": 58.6,
+        "decimals": 1
+      },
+      {
+        "method": "MeanAnchor",
+        "metric": "Raw_ECE",
+        "actual": 3.654895266989358,
+        "display": 3.65,
+        "decimals": 2
+      },
+      {
+        "method": "MeanAnchor",
+        "metric": "DevTemperature_ECE",
+        "actual": 3.753293071783957,
+        "display": 3.75,
+        "decimals": 2
+      },
+      {
+        "method": "MeanAnchor",
+        "metric": "AP",
+        "actual": 59.84122475332475,
+        "display": 59.84,
+        "decimals": 2
+      },
+      {
+        "method": "MeanAnchor",
+        "metric": "RuleA_specificity",
+        "actual": 96.22552033347176,
+        "display": 96.2,
+        "decimals": 1
+      },
+      {
+        "method": "MeanAnchor",
+        "metric": "RuleA_sensitivity",
+        "actual": 66.0367469973053,
+        "display": 66.0,
+        "decimals": 1
+      },
+      {
+        "method": "MeanAnchor",
+        "metric": "RuleA_PPV",
+        "actual": 54.21446495453532,
+        "display": 54.2,
+        "decimals": 1
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "backbone": "ECGFounder",
+      "cohort": "chapman",
+      "episodes": 20,
+      "discrimination_and_ECE": true,
+      "DCA_and_threshold_archived": false
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "ningbo",
+      "episodes": 40,
+      "discrimination_and_ECE": true,
+      "DCA_and_threshold_archived": true
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "cpsc2018",
+      "episodes": 40,
+      "discrimination_and_ECE": true,
+      "DCA_and_threshold_archived": true
+    },
+    {
+      "backbone": "ECGFounder",
+      "cohort": "sph",
+      "episodes": 40,
+      "discrimination_and_ECE": true,
+      "DCA_and_threshold_archived": true
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "chapman",
+      "episodes": 20,
+      "discrimination_and_ECE": true,
+      "DCA_and_threshold_archived": false
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "ningbo",
+      "episodes": 40,
+      "discrimination_and_ECE": true,
+      "DCA_and_threshold_archived": true
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "cpsc2018",
+      "episodes": 40,
+      "discrimination_and_ECE": true,
+      "DCA_and_threshold_archived": true
+    },
+    {
+      "backbone": "MERL",
+      "cohort": "sph",
+      "episodes": 40,
+      "discrimination_and_ECE": true,
+      "DCA_and_threshold_archived": true
+    }
+  ],
+  "archived_rule_DCA_scope": "240 external episodes; 40 Chapman episodes have calibration references but no archived Rule/DCA outcome tables",
+  "prediction_replay_sha256": "c7e375a8929cc22cf846c1358476159f29e884679b75f11141f70c1e9c896f2d",
+  "spec_sha256": "1ae90e1b4a9d50d015ea787569e053e47b4a4491ff492ff39364f5eff0766e59",
+  "references": [
+    {
+      "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/supplement_core_20261118/calibration_episodes.csv",
+      "sha256": "bf822231010ceb573fc332551b72bc52f67ecd07df526d34fd6e9f5dedc34ddd"
+    },
+    {
+      "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/supplement_core_20261118/temperature.lock.json",
+      "sha256": "fc2dbae8bdb24a6d26074aaffc57050c66a995beac115c7733cbf689f4f543e2"
+    },
+    {
+      "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/dca_threshold_20261118/global_thresholds.lock.json",
+      "sha256": "b195dc9409affa71e548fef55ec4f4dcbde93daafde83e09f186f3e0969929f8"
+    },
+    {
+      "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/dca_threshold_20261118/locked_threshold_episodes.csv",
+      "sha256": "d19ad50b5f2fe0d4a7ba6d7c34f82710f9d34efb279704425ec23fc74e5f69e6"
+    },
+    {
+      "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/dca_threshold_20261118/locked_threshold_summary.csv",
+      "sha256": "1a4d1382e12e9e278eaba5a5df53f2f04659fce03d1164b9a0449a4a76b9c928"
+    },
+    {
+      "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/dca_threshold_20261118/dca_episodes.csv",
+      "sha256": "b08d3e597dd4143dea4654f5364191a54b16c311174878aca0a0ab2d7b8f38ac"
+    },
+    {
+      "path": "/home/wy/ECGFounder/supplement_queue_20261101_remote/dca_threshold_20261118/dca_summary.csv",
+      "sha256": "1c5eafe1476834491b79400c4525f54428f985d2ffdb8fd513866f901a97102d"
+    }
+  ],
+  "adapter_fits_started": 0,
+  "GPU_used": false,
+  "seconds": 82.5901563167572
+}
